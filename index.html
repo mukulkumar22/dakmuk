@@ -6,6 +6,13 @@
   <title>Daksha & Mukul — Roka</title>
   <meta property="og:title" content="Daksha & Mukul's Roka" />
   <meta property="og:description" content="Dixit & Sachdeva families invite you — 26th July 2026, Apno Ghar, Gurgaon" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dakmuk.in/" />
+  <meta property="og:image" content="https://dakmuk.in/couple.jpg" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="750" />
+  <meta name="theme-color" content="#b4d0e0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='10' r='5.5' fill='%23E8BA28'/%3E%3Ccircle cx='9' cy='16' r='5.5' fill='%23D4A020'/%3E%3Ccircle cx='23' cy='16' r='5.5' fill='%23D4A020'/%3E%3Ccircle cx='12' cy='23' r='5.5' fill='%23C88C10'/%3E%3Ccircle cx='20' cy='23' r='5.5' fill='%23E8BA28'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@600;700&family=Noto+Sans+Devanagari:wght@400;500&display=swap" rel="stylesheet" />
@@ -22,188 +29,325 @@
       color: #2C4222;
     }
 
-    /* ── Botanical header — compact ── */
-    .botanical-top { width: 100%; display: block; max-height: 160px; }
+    /* ── Botanical header — taller so canopy arches overhead ── */
+    .botanical-top {
+      width: 100%;
+      display: block;
+      max-height: 220px;
+    }
 
-    /* ── Hero block ── */
+    /* ── Hero ── */
     .hero {
       text-align: center;
-      padding: 0.5rem 1.5rem 0;
+      padding: 0.75rem 2rem 0;
     }
 
     .tagline-quote {
       font-size: clamp(12px, 3vw, 15px);
       font-style: italic;
       color: #3A5A2A;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
     }
 
     .families-text {
-      font-size: clamp(18px, 5.5vw, 26px);
+      font-size: clamp(17px, 4.8vw, 24px);
       font-weight: 700;
       color: #2C4222;
       line-height: 1.2;
+      /* prevent orphan */
+      max-width: 320px;
+      margin: 0 auto;
     }
     .families-text .rust { color: #8B3A1E; }
-
-    .hindi-sub {
-      font-family: 'Noto Sans Devanagari', sans-serif;
-      font-size: 10px;
-      color: #6A8050;
-      letter-spacing: 2px;
-      margin-top: 0.3rem;
-    }
 
     /* ── Divider ── */
     .divider {
       display: flex; align-items: center; gap: 10px;
-      margin: 0.9rem 2rem;
+      margin: 1rem 2.5rem;
     }
-    .divider-line { flex: 1; height: 0.5px; background: #4A7C35; opacity: 0.35; }
-    .divider-dot  { width: 5px; height: 5px; border-radius: 50%; background: #6BA348; opacity: 0.6; }
+    .divider-line { flex: 1; height: 0.5px; background: #4A7C35; opacity: 0.3; }
+    .divider-dot  { width: 4px; height: 4px; border-radius: 50%; background: #6BA348; opacity: 0.55; }
 
     /* ── Names + Roka ── */
     .names-section { text-align: center; padding: 0 1.5rem; }
 
-    .to-text { font-style: italic; font-size: 13px; color: #6A8050; }
+    .to-text {
+      font-style: italic; font-size: 13px; color: #6A8050;
+      margin-bottom: 0.1rem;
+    }
 
     .names {
-      font-size: clamp(28px, 8.5vw, 42px);
-      font-weight: 700; color: #2C4222; line-height: 1.1; letter-spacing: 1px;
+      font-size: clamp(26px, 7.5vw, 38px);
+      font-weight: 700; color: #2C4222;
+      line-height: 1.1; letter-spacing: 0.5px;
     }
     .names .rust { color: #8B3A1E; font-weight: 400; font-style: italic; }
 
     .roka-script {
       font-family: 'Dancing Script', cursive;
-      font-size: clamp(48px, 14vw, 64px);
-      color: #8B3A1E; font-weight: 700; line-height: 1.05;
+      font-size: clamp(56px, 16vw, 72px);
+      color: #8B3A1E; font-weight: 700;
+      line-height: 1.0;
     }
 
-    .roka-hindi {
-      font-family: 'Noto Sans Devanagari', sans-serif;
-      font-size: 10px; color: #6A8050; letter-spacing: 2px;
+    /* ── Date — tight, unified ── */
+    .date-section {
+      text-align: center;
+      padding: 0.5rem 1.5rem 0;
+      line-height: 1;
     }
 
-    /* ── Date ── */
-    .date-section { text-align: center; padding: 0.75rem 1.5rem 0; }
-    .date-on { font-style: italic; font-size: 14px; color: #6A8050; display: block; }
+    .date-block {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .date-on {
+      font-style: italic; font-size: 14px;
+      color: #6A8050; margin-bottom: 0.1rem;
+    }
 
     .date-number {
-      font-size: clamp(64px, 20vw, 90px);
-      font-weight: 700; color: #2C4222; line-height: 0.9; letter-spacing: -2px;
+      font-size: clamp(72px, 22vw, 96px);
+      font-weight: 700; color: #2C4222;
+      line-height: 0.85; letter-spacing: -3px;
     }
-    .date-number sup { font-size: 0.28em; font-weight: 400; letter-spacing: 0; vertical-align: super; }
+    .date-number sup {
+      font-size: 0.26em; font-weight: 400;
+      letter-spacing: 0; vertical-align: super;
+    }
 
     .date-month {
-      font-size: clamp(32px, 10vw, 48px);
-      font-weight: 700; color: #2C4222; letter-spacing: 5px; line-height: 1;
+      font-size: clamp(30px, 9vw, 44px);
+      font-weight: 700; color: #2C4222;
+      letter-spacing: 8px; line-height: 1;
+      margin-top: 0.05rem;
     }
 
-    /* ── Countdown ── */
-    .countdown-wrap {
-      margin: 1rem 1.5rem 0;
-      background: rgba(255,255,255,0.5);
-      border: 0.5px solid rgba(74,124,53,0.25);
-      border-radius: 4px;
-      padding: 1rem 1rem 0.75rem;
+    /* ── Unified info section (no heavy cards) ── */
+    .info-section {
       text-align: center;
-    }
-
-    .countdown-label {
-      font-family: 'Noto Sans Devanagari', sans-serif;
-      font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
-      color: #6A8050; margin-bottom: 0.6rem;
+      padding: 1.5rem 2rem 0;
     }
 
     .countdown-units {
-      display: flex; justify-content: center; gap: 0.5rem;
+      display: flex; justify-content: center;
+      gap: 0; margin-bottom: 1.25rem;
     }
 
     .countdown-unit {
-      display: flex; flex-direction: column; align-items: center;
-      min-width: 56px;
+      display: flex; flex-direction: column;
+      align-items: center; min-width: 60px;
     }
 
     .countdown-num {
-      font-size: clamp(28px, 8vw, 36px);
+      font-size: clamp(30px, 9vw, 40px);
       font-weight: 700; color: #2C4222; line-height: 1;
     }
 
     .countdown-unit-label {
       font-family: 'Noto Sans Devanagari', sans-serif;
-      font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
-      color: #6A8050; margin-top: 2px;
+      font-size: 8px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #6A8050;
+      margin-top: 2px;
     }
 
     .countdown-sep {
-      font-size: 24px; color: #6BA348; opacity: 0.6;
-      align-self: flex-start; padding-top: 4px;
+      font-size: 20px; color: #6BA348; opacity: 0.5;
+      align-self: flex-start; padding-top: 6px;
+      padding: 6px 2px 0;
     }
 
-    .countdown-done {
-      font-size: 14px; font-style: italic; color: #8B3A1E;
-      padding: 0.5rem 0;
-    }
-
-    /* ── Details card ── */
-    .details-card {
-      margin: 0.9rem 1.5rem 0;
-      padding: 1rem 1.25rem;
-      background: rgba(255,255,255,0.45);
-      border: 0.5px solid rgba(74,124,53,0.3);
-      border-radius: 4px;
-      text-align: center;
+    /* thin rule between countdown and details */
+    .info-rule {
+      width: 40px; height: 0.5px;
+      background: #4A7C35; opacity: 0.3;
+      margin: 0 auto 1.1rem;
     }
 
     .detail-row {
-      display: flex; align-items: center; justify-content: center;
-      gap: 0.6rem;
+      display: flex; align-items: center;
+      justify-content: center; gap: 0.5rem;
       font-family: 'Noto Sans Devanagari', sans-serif;
       font-size: 13px; color: #3A5A2A;
-      padding: 0.4rem 0;
+      padding: 0.3rem 0;
     }
-    .detail-row + .detail-row { border-top: 0.5px solid rgba(74,124,53,0.15); }
 
-    /* ── Buttons ── */
+    /* ── Buttons — refined ── */
     .actions {
-      display: flex; flex-direction: column; gap: 0.65rem;
-      margin: 1rem 1.5rem 0;
+      display: flex; flex-direction: column;
+      gap: 0.6rem; margin: 1.5rem 2rem 0;
     }
 
     .btn {
-      display: block; width: 100%; padding: 0.75rem 1rem;
+      display: block; width: 100%;
+      padding: 0.7rem 1rem;
       font-family: 'Noto Sans Devanagari', sans-serif;
-      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
-      text-decoration: none; border-radius: 3px;
-      cursor: pointer; border: none; text-align: center;
+      font-size: 10px; letter-spacing: 2.5px;
+      text-transform: uppercase; text-decoration: none;
+      border-radius: 2px; cursor: pointer;
+      border: none; text-align: center;
       transition: opacity 0.15s;
     }
-    .btn:active { opacity: 0.75; }
+    .btn:active { opacity: 0.7; }
 
     .btn-primary {
-      background: #2C4222; color: #f0ead8;
+      background: #2C4222;
+      color: #f0ead8;
     }
 
     .btn-secondary {
       background: transparent;
-      border: 0.5px solid rgba(44,66,34,0.45);
+      border: 0.5px solid rgba(44, 66, 34, 0.4);
       color: #2C4222;
     }
 
-    /* ── Footer ── */
-    .footer {
-      text-align: center; padding: 1.75rem 2rem 2.5rem;
+    .btn-link {
+      background: none; border: none; cursor: pointer;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 10px; letter-spacing: 1.5px;
+      color: #6A8050; text-decoration: underline;
+      text-underline-offset: 3px;
+      padding: 0.2rem;
     }
+
+    /* ── Footer with botanical motif ── */
+    .footer {
+      text-align: center;
+      padding: 2rem 2rem 2.5rem;
+    }
+
+    .footer-motif {
+      display: block;
+      margin: 0 auto 0.75rem;
+    }
+
     .domain {
       font-family: 'Noto Sans Devanagari', sans-serif;
       font-size: 11px; color: #8AAC70; letter-spacing: 1px;
+    }
+
+    /* ── Entrance choreography ── */
+    .hero, .divider, .names-section, .date-section, .info-section, .actions, .closing-line {
+      opacity: 0;
+      animation: rise 0.7s ease-out forwards;
+    }
+    .hero          { animation-delay: 0.1s; }
+    .divider       { animation-delay: 0.3s; }
+    .names-section { animation-delay: 0.5s; }
+    .date-section  { animation-delay: 0.75s; }
+    .info-section  { animation-delay: 1.0s; }
+    .actions       { animation-delay: 1.2s; }
+    .closing-line  { animation-delay: 1.35s; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Closing line ── */
+    .closing-line {
+      text-align: center;
+      font-style: italic;
+      font-size: clamp(14px, 3.8vw, 17px);
+      color: #3A5A2A;
+      padding: 2.25rem 2rem 1.75rem;
+    }
+
+    /* ── Falling amaltas petals ── */
+    .petals { position: fixed; inset: 0; pointer-events: none; z-index: 5; overflow: hidden; }
+
+    .petal {
+      position: absolute; top: -20px;
+      width: 9px; height: 6px; border-radius: 50%;
+      background: radial-gradient(ellipse at 35% 35%, #F0CA40, #D4A020);
+      opacity: 0;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0%   { transform: translateY(-3vh) translateX(0) rotate(0deg); opacity: 0; }
+      8%   { opacity: 0.85; }
+      85%  { opacity: 0.7; }
+      100% { transform: translateY(105vh) translateX(48px) rotate(320deg); opacity: 0; }
+    }
+
+    .petal:nth-child(1) { left: 6%;  animation-duration: 11s; animation-delay: 0s; }
+    .petal:nth-child(2) { left: 18%; animation-duration: 14s; animation-delay: 3.5s; }
+    .petal:nth-child(3) { left: 31%; animation-duration: 12s; animation-delay: 7s; }
+    .petal:nth-child(4) { left: 44%; animation-duration: 15s; animation-delay: 1.5s; }
+    .petal:nth-child(5) { left: 57%; animation-duration: 10s; animation-delay: 5s; }
+    .petal:nth-child(6) { left: 68%; animation-duration: 13s; animation-delay: 9s; }
+    .petal:nth-child(7) { left: 79%; animation-duration: 16s; animation-delay: 2.5s; }
+    .petal:nth-child(8) { left: 90%; animation-duration: 12s; animation-delay: 6s; }
+
+    /* ── Swaying canopy ── */
+    .sway-l, .sway-r {
+      transform-box: fill-box;
+      animation: sway 7s ease-in-out infinite alternate;
+    }
+    .sway-l { transform-origin: 0% 0%; }
+    .sway-r { transform-origin: 100% 0%; animation-delay: -3.5s; }
+
+    @keyframes sway {
+      from { transform: rotate(-1.1deg); }
+      to   { transform: rotate(1.1deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .petal, .sway-l, .sway-r { animation: none; }
+      .hero, .divider, .names-section, .date-section, .info-section, .actions, .closing-line {
+        animation: none; opacity: 1;
+      }
+    }
+
+    /* ── Couple in the grass ── */
+    .couple-section {
+      margin-top: 2rem;
+      position: relative;
+    }
+
+    .couple-img {
+      width: 100%; display: block; cursor: pointer;
+      -webkit-mask-image: linear-gradient(180deg, black 88%, transparent 100%);
+      mask-image: linear-gradient(180deg, black 88%, transparent 100%);
+    }
+
+    .couple-hint {
+      position: absolute;
+      bottom: 10px; left: 0; right: 0;
+      text-align: center;
+      font-style: italic;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.75);
+      pointer-events: none;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 18px;
+      pointer-events: none;
+      z-index: 6;
+      animation: floatUp 1.2s ease-out forwards;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0) scale(0.7); opacity: 1; }
+      to   { transform: translateY(-80px) scale(1.5); opacity: 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Botanical header — same SVG, just cropped smaller via max-height -->
-  <svg class="botanical-top" viewBox="0 0 390 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMin slice">
+  <!-- Falling amaltas petals -->
+  <div class="petals" aria-hidden="true">
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div>
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  </div>
+
+  <!-- Botanical header — taller viewBox crop to show sky + canopy arch -->
+  <svg class="botanical-top" viewBox="0 0 390 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMin slice">
     <defs>
       <radialGradient id="sky" cx="50%" cy="10%" r="90%">
         <stop offset="0%" stop-color="#cce4f0"/>
@@ -218,11 +362,11 @@
     <ellipse cx="100" cy="65" rx="65"  ry="32" fill="white" opacity="0.5"  filter="url(#soft)"/>
     <ellipse cx="50"  cy="90" rx="50"  ry="25" fill="white" opacity="0.4"  filter="url(#softer)"/>
     <!-- Left branches -->
+    <g class="sway-l">
     <path d="M -15 -5 C 15 35, 28 80, 18 145 C 10 190, 35 225, 28 270" stroke="#4A2810" stroke-width="11" fill="none" stroke-linecap="round"/>
     <path d="M 16 55  C 55 22, 110 15, 162 32"  stroke="#5A3010" stroke-width="7" fill="none" stroke-linecap="round"/>
     <path d="M 20 105 C 58 78, 108 72, 148 84"  stroke="#5A3010" stroke-width="5" fill="none" stroke-linecap="round"/>
     <path d="M 22 160 C 52 138, 95 133, 118 146" stroke="#4A2810" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <!-- Left leaves -->
     <ellipse cx="170" cy="28" rx="30" ry="14" fill="#2D6820" transform="rotate(-22 170 28)"/>
     <ellipse cx="148" cy="18" rx="25" ry="12" fill="#357828" transform="rotate(-42 148 18)"/>
     <ellipse cx="120" cy="12" rx="22" ry="10" fill="#2D6820" transform="rotate(-55 120 12)"/>
@@ -238,16 +382,16 @@
     <ellipse cx="118" cy="142" rx="23" ry="11" fill="#2D6820" transform="rotate(-22 118 142)"/>
     <ellipse cx="93"  cy="134" rx="19" ry="9"  fill="#448A30" transform="rotate(6 93 134)"/>
     <ellipse cx="96"  cy="154" rx="21" ry="10" fill="#6AA82E" transform="rotate(-38 96 154)"/>
-    <!-- Left flowers -->
     <g opacity="0.93"><circle cx="158" cy="55" r="5.5" fill="#D4A020"/><circle cx="152" cy="63" r="6" fill="#E8BA28"/><circle cx="161" cy="65" r="5" fill="#D09018"/><circle cx="150" cy="73" r="5" fill="#C88C10"/><circle cx="160" cy="74" r="4.5" fill="#D4A020"/><circle cx="153" cy="82" r="4.5" fill="#E0A820"/><circle cx="162" cy="84" r="4" fill="#C88C10"/><circle cx="155" cy="92" r="3.5" fill="#D4A020"/><circle cx="163" cy="93" r="3" fill="#E8BA28"/></g>
     <g opacity="0.88"><circle cx="126" cy="46" r="5" fill="#E8BA28"/><circle cx="120" cy="54" r="5.5" fill="#D4A020"/><circle cx="129" cy="56" r="5" fill="#C88C10"/><circle cx="122" cy="64" r="4.5" fill="#D4A020"/><circle cx="131" cy="65" r="4" fill="#E0A820"/><circle cx="124" cy="73" r="4" fill="#C88C10"/><circle cx="132" cy="74" r="3.5" fill="#D4A020"/><circle cx="126" cy="81" r="3" fill="#E8BA28"/></g>
     <g opacity="0.82"><circle cx="103" cy="148" r="4.5" fill="#D4A020"/><circle cx="97" cy="156" r="5" fill="#E8BA28"/><circle cx="106" cy="157" r="4" fill="#C88C10"/><circle cx="100" cy="165" r="4" fill="#D4A020"/><circle cx="108" cy="166" r="3.5" fill="#E0A820"/><circle cx="102" cy="173" r="3" fill="#C88C10"/></g>
+    </g>
     <!-- Right branches -->
+    <g class="sway-r">
     <path d="M 405 -5 C 375 35, 362 80, 372 145 C 380 190, 355 225, 362 270" stroke="#4A2810" stroke-width="11" fill="none" stroke-linecap="round"/>
     <path d="M 374 55  C 335 22, 280 15, 228 32"  stroke="#5A3010" stroke-width="7" fill="none" stroke-linecap="round"/>
     <path d="M 370 105 C 332 78, 282 72, 242 84"  stroke="#5A3010" stroke-width="5" fill="none" stroke-linecap="round"/>
     <path d="M 368 160 C 338 138, 295 133, 272 146" stroke="#4A2810" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <!-- Right leaves -->
     <ellipse cx="220" cy="28" rx="30" ry="14" fill="#2D6820" transform="rotate(22 220 28)"/>
     <ellipse cx="242" cy="18" rx="25" ry="12" fill="#357828" transform="rotate(42 242 18)"/>
     <ellipse cx="270" cy="12" rx="22" ry="10" fill="#2D6820" transform="rotate(55 270 12)"/>
@@ -263,10 +407,10 @@
     <ellipse cx="272" cy="142" rx="23" ry="11" fill="#2D6820" transform="rotate(22 272 142)"/>
     <ellipse cx="297" cy="134" rx="19" ry="9"  fill="#448A30" transform="rotate(-6 297 134)"/>
     <ellipse cx="294" cy="154" rx="21" ry="10" fill="#6AA82E" transform="rotate(38 294 154)"/>
-    <!-- Right flowers -->
     <g opacity="0.93"><circle cx="232" cy="55" r="5.5" fill="#D4A020"/><circle cx="238" cy="63" r="6" fill="#E8BA28"/><circle cx="229" cy="65" r="5" fill="#D09018"/><circle cx="240" cy="73" r="5" fill="#C88C10"/><circle cx="230" cy="74" r="4.5" fill="#D4A020"/><circle cx="237" cy="82" r="4.5" fill="#E0A820"/><circle cx="228" cy="84" r="4" fill="#C88C10"/><circle cx="235" cy="92" r="3.5" fill="#D4A020"/><circle cx="227" cy="93" r="3" fill="#E8BA28"/></g>
     <g opacity="0.88"><circle cx="264" cy="46" r="5" fill="#E8BA28"/><circle cx="270" cy="54" r="5.5" fill="#D4A020"/><circle cx="261" cy="56" r="5" fill="#C88C10"/><circle cx="268" cy="64" r="4.5" fill="#D4A020"/><circle cx="259" cy="65" r="4" fill="#E0A820"/><circle cx="266" cy="73" r="4" fill="#C88C10"/><circle cx="258" cy="74" r="3.5" fill="#D4A020"/><circle cx="264" cy="81" r="3" fill="#E8BA28"/></g>
     <g opacity="0.82"><circle cx="287" cy="148" r="4.5" fill="#D4A020"/><circle cx="293" cy="156" r="5" fill="#E8BA28"/><circle cx="284" cy="157" r="4" fill="#C88C10"/><circle cx="290" cy="165" r="4" fill="#D4A020"/><circle cx="282" cy="166" r="3.5" fill="#E0A820"/><circle cx="288" cy="173" r="3" fill="#C88C10"/></g>
+    </g>
     <!-- Birds -->
     <path d="M 178 52 C 183 47, 188 47, 193 52" stroke="#1A2E10" stroke-width="1.8" fill="none" stroke-linecap="round"/>
     <path d="M 192 52 C 197 47, 202 47, 207 52" stroke="#1A2E10" stroke-width="1.8" fill="none" stroke-linecap="round"/>
@@ -277,7 +421,7 @@
   <!-- Hero -->
   <div class="hero">
     <p class="tagline-quote">Treasures tucked away for us to find</p>
-    <div class="families-text">Dixit <span class="rust">&amp;</span> Sachdeva families invite you</div>
+    <div class="families-text">Dixit <span class="rust">&amp;</span> Sachdeva<br>families invite you</div>
   </div>
 
   <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
@@ -289,16 +433,17 @@
     <div class="roka-script">Roka</div>
   </div>
 
-  <!-- Date -->
+  <!-- Date — tight unified block -->
   <div class="date-section">
-    <span class="date-on">on</span>
-    <div class="date-number">26<sup>th</sup></div>
-    <div class="date-month">JULY</div>
+    <div class="date-block">
+      <span class="date-on">on</span>
+      <div class="date-number">26<sup>th</sup></div>
+      <div class="date-month">JULY</div>
+    </div>
   </div>
 
-  <!-- Countdown -->
-  <div class="countdown-wrap">
-    <p class="countdown-label">Counting down</p>
+  <!-- Info: countdown + details, no heavy cards -->
+  <div class="info-section">
     <div class="countdown-units" id="countdown">
       <div class="countdown-unit">
         <span class="countdown-num" id="cd-days">--</span>
@@ -320,70 +465,105 @@
         <span class="countdown-unit-label">Secs</span>
       </div>
     </div>
-  </div>
 
-  <!-- Details -->
-  <div class="details-card">
+    <div class="info-rule"></div>
+
     <div class="detail-row"><span>🕔</span><span>5:00 PM onwards</span></div>
     <div class="detail-row"><span>📍</span><span>Apno Ghar, Gurgaon</span></div>
   </div>
 
-  <!-- Actions -->
+  <!-- Buttons -->
   <div class="actions">
     <a class="btn btn-primary" href="https://maps.app.goo.gl/jzLtpnSUDssejTiPA" target="_blank" rel="noopener">View on Maps</a>
-    <button class="btn btn-secondary" id="cal-btn">Add to Calendar</button>
+    <a class="btn btn-secondary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Daksha+%26+Mukul%27s+Roka&amp;dates=20260726T170000/20260726T210000&amp;ctz=Asia/Kolkata&amp;details=Dixit+%26+Sachdeva+families+invite+you+to+the+Roka+ceremony.+dakmuk.in&amp;location=Apno+Ghar+Resort%2C+NH-8%2C+Gurgaon" target="_blank" rel="noopener">Add to Google Calendar</a>
+    <button class="btn-link" id="ics-btn">Apple Calendar (.ics)</button>
   </div>
 
-  <div class="footer"><p class="domain">dakmuk.in</p></div>
+  <p class="closing-line">We can't wait to celebrate with you</p>
+
+  <!-- Daksha & Mukul in the grass -->
+  <div class="couple-section" id="couple">
+    <img class="couple-img" src="couple.jpg" alt="Daksha and Mukul lying in the grass — illustration from our invite" />
+    <p class="couple-hint">tap us ♥</p>
+  </div>
+
+  <!-- Footer with botanical motif -->
+  <div class="footer">
+    <svg class="footer-motif" width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- small branch with amaltas flowers -->
+      <path d="M 10 30 C 30 20, 55 18, 60 20 C 65 18, 90 20, 110 30" stroke="#5A3010" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M 30 20 C 32 10, 36 5, 38 2"  stroke="#5A3010" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M 60 18 C 60 10, 60 5, 60 1"  stroke="#5A3010" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M 90 20 C 88 10, 84 5, 82 2"  stroke="#5A3010" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <!-- leaves -->
+      <ellipse cx="35" cy="8"  rx="9" ry="4" fill="#4A8A30" transform="rotate(-30 35 8)"/>
+      <ellipse cx="42" cy="4"  rx="8" ry="3.5" fill="#78B434" transform="rotate(-50 42 4)"/>
+      <ellipse cx="58" cy="6"  rx="9" ry="4" fill="#4A8A30" transform="rotate(-5 58 6)"/>
+      <ellipse cx="63" cy="3"  rx="8" ry="3.5" fill="#78B434" transform="rotate(15 63 3)"/>
+      <ellipse cx="85" cy="8"  rx="9" ry="4" fill="#4A8A30" transform="rotate(30 85 8)"/>
+      <ellipse cx="78" cy="4"  rx="8" ry="3.5" fill="#78B434" transform="rotate(50 78 4)"/>
+      <!-- yellow flower clusters -->
+      <circle cx="36" cy="14" r="3" fill="#E8BA28"/><circle cx="32" cy="18" r="3.5" fill="#D4A020"/><circle cx="38" cy="18" r="3" fill="#C88C10"/><circle cx="34" cy="23" r="2.5" fill="#D4A020"/>
+      <circle cx="60" cy="12" r="3" fill="#E8BA28"/><circle cx="56" cy="17" r="3.5" fill="#D4A020"/><circle cx="62" cy="17" r="3" fill="#C88C10"/><circle cx="58" cy="22" r="2.5" fill="#D4A020"/>
+      <circle cx="84" cy="14" r="3" fill="#E8BA28"/><circle cx="80" cy="18" r="3.5" fill="#D4A020"/><circle cx="86" cy="18" r="3" fill="#C88C10"/><circle cx="82" cy="23" r="2.5" fill="#D4A020"/>
+    </svg>
+    <p class="domain">dakmuk.in</p>
+  </div>
 
   <script>
-    // Countdown to 26 July 2026, 17:00 IST (UTC+5:30)
     const target = new Date('2026-07-26T17:00:00+05:30').getTime();
 
     function tick() {
-      const now = Date.now();
-      const diff = target - now;
+      const diff = target - Date.now();
       const el = document.getElementById('countdown');
-
       if (diff <= 0) {
-        el.innerHTML = '<p class="countdown-done">It\'s Roka time! 🎉</p>';
+        el.innerHTML = '<p style="font-style:italic;color:#8B3A1E;font-size:15px">It\'s Roka time! 🎉</p>';
         return;
       }
-
       const d = Math.floor(diff / 86400000);
       const h = Math.floor((diff % 86400000) / 3600000);
       const m = Math.floor((diff % 3600000) / 60000);
       const s = Math.floor((diff % 60000) / 1000);
-
       document.getElementById('cd-days').textContent  = String(d).padStart(2,'0');
       document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
       document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
       document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
     }
+    tick(); setInterval(tick, 1000);
 
-    tick();
-    setInterval(tick, 1000);
-
-    // Add to Calendar — generates an .ics file
-    document.getElementById('cal-btn').addEventListener('click', function () {
+    document.getElementById('ics-btn').addEventListener('click', function () {
       const ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'BEGIN:VEVENT',
+        'BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',
         'DTSTART;TZID=Asia/Kolkata:20260726T170000',
         'DTEND;TZID=Asia/Kolkata:20260726T210000',
         'SUMMARY:Daksha & Mukul\'s Roka',
         'DESCRIPTION:Dixit & Sachdeva families invite you to the Roka ceremony.',
         'LOCATION:Apno Ghar Resort\\, NH-8\\, Gurgaon',
-        'END:VEVENT',
-        'END:VCALENDAR'
+        'END:VEVENT','END:VCALENDAR'
       ].join('\r\n');
-
-      const blob = new Blob([ics], { type: 'text/calendar' });
       const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
+      a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
       a.download = 'daksha-mukul-roka.ics';
       a.click();
+    });
+
+    // Tap the couple → hearts float up
+    const couple = document.getElementById('couple');
+    const heartChars = ['💛', '🤍', '💚'];
+    couple.addEventListener('click', function (e) {
+      const rect = couple.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      for (let i = 0; i < 3; i++) {
+        const h = document.createElement('span');
+        h.className = 'heart';
+        h.textContent = heartChars[Math.floor(Math.random() * heartChars.length)];
+        h.style.left = (x - 10 + (i - 1) * 22) + 'px';
+        h.style.top = (y - 10 - i * 6) + 'px';
+        h.style.animationDelay = (i * 0.1) + 's';
+        couple.appendChild(h);
+        setTimeout(() => h.remove(), 1500 + i * 100);
+      }
     });
   </script>
 </body>
