@@ -3,154 +3,210 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Daksha & Mukul</title>
+  <title>Daksha & Mukul — Roka</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Sans+Devanagari:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@600;700&family=Noto+Sans+Devanagari:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html, body {
-      height: 100%;
-      width: 100%;
-    }
-
     body {
       min-height: 100vh;
-      min-height: 100dvh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #1a1410;
+      background: linear-gradient(180deg,
+        #b4d0e0 0%,
+        #c4dce4 12%,
+        #d4e8d8 30%,
+        #e4f0d8 50%,
+        #eef4e4 70%,
+        #f4f0e0 100%
+      );
       font-family: 'Playfair Display', Georgia, serif;
+      color: #2C4222;
     }
 
-    .page {
+    /* ── Botanical header ── */
+    .botanical-top {
       width: 100%;
-      min-height: 100vh;
-      min-height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      padding: 3rem 2rem;
+      display: block;
+    }
+
+    /* ── Tagline ── */
+    .tagline-section {
       text-align: center;
+      padding: 0.5rem 2.5rem 0.75rem;
     }
 
-    .border-stripe {
-      position: fixed;
-      left: 0; right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, #C4692A, #E8A44A, #C4692A, #7B3A1E, #E8A44A);
-      z-index: 10;
+    .tagline-quote {
+      font-size: clamp(14px, 3.5vw, 17px);
+      font-style: italic;
+      color: #3A5A2A;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
     }
-    .border-stripe.top { top: 0; }
-    .border-stripe.bottom { bottom: 0; }
 
-    .motif {
-      font-size: 20px;
-      letter-spacing: 10px;
-      opacity: 0.45;
-      margin-bottom: 0.75rem;
-      color: #C4692A;
+    .families-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 6.5vw, 30px);
+      font-weight: 700;
+      color: #2C4222;
+      line-height: 1.25;
     }
+
+    .families-text .rust { color: #8B3A1E; }
 
     .hindi-sub {
       font-family: 'Noto Sans Devanagari', sans-serif;
-      font-size: 12px;
-      font-weight: 400;
-      color: #aaa;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-    }
-
-    .names {
-      font-size: clamp(44px, 13vw, 64px);
-      font-weight: 400;
-      color: #f0e8df;
-      line-height: 1.05;
-    }
-
-    .names em {
-      font-style: italic;
-      color: #B85C1A;
-    }
-
-    .ampersand {
-      display: block;
-      font-style: italic;
-      font-size: clamp(28px, 8vw, 40px);
-      color: #C4692A;
-      margin: 0.05rem 0;
-    }
-
-    .tagline {
-      font-family: 'Noto Sans Devanagari', sans-serif;
       font-size: 11px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-top: 1.25rem;
-      font-weight: 400;
+      color: #6A8050;
+      letter-spacing: 2px;
+      margin-top: 0.5rem;
     }
 
+    /* ── Divider ── */
     .divider {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 10px;
-      margin: 1.25rem auto;
+      margin: 1.25rem 2rem;
+    }
+    .divider-line { flex: 1; height: 0.5px; background: #4A7C35; opacity: 0.35; }
+    .divider-dot  { width: 5px; height: 5px; border-radius: 50%; background: #6BA348; opacity: 0.6; }
+
+    /* ── Names ── */
+    .names-section {
+      text-align: center;
+      padding: 0.5rem 2rem 0;
     }
 
-    .divider-line {
-      width: 50px;
-      height: 0.5px;
-      background: #C4692A;
-      opacity: 0.4;
+    .to-text {
+      font-style: italic;
+      font-size: 15px;
+      color: #6A8050;
+      margin-bottom: 0.2rem;
     }
 
-    .divider-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: #C4692A;
-      opacity: 0.6;
-    }
-
-    .events {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 2.5rem;
-      margin: 0.25rem 0;
-    }
-
-    .event {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .event-label-hindi {
-      font-family: 'Noto Sans Devanagari', sans-serif;
-      font-size: 11px;
-      color: #bbb;
+    .names {
+      font-size: clamp(32px, 9.5vw, 48px);
+      font-weight: 700;
+      color: #2C4222;
+      line-height: 1.1;
       letter-spacing: 1px;
     }
 
-    .event-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 500;
-      color: #f0e8df;
+    .names .rust { color: #8B3A1E; font-weight: 400; font-style: italic; }
+
+    .roka-script {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(52px, 15vw, 70px);
+      color: #8B3A1E;
+      font-weight: 700;
+      line-height: 1.1;
     }
 
-    .event-sep {
-      font-size: 20px;
-      color: #ccc;
-      padding-top: 10px;
+    .roka-hindi {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 11px;
+      color: #6A8050;
+      letter-spacing: 2px;
+      margin-top: 0.1rem;
+    }
+
+    /* ── Date ── */
+    .date-section {
+      text-align: center;
+      padding: 1.5rem 2rem 0.5rem;
+    }
+
+    .date-on {
+      font-style: italic;
+      font-size: 16px;
+      color: #6A8050;
+      display: block;
+      margin-bottom: -0.2rem;
+    }
+
+    .date-number {
+      font-size: clamp(80px, 24vw, 110px);
+      font-weight: 700;
+      color: #2C4222;
+      line-height: 0.9;
+      letter-spacing: -3px;
+    }
+
+    .date-number sup {
+      font-size: 0.28em;
+      font-weight: 400;
+      letter-spacing: 0;
+      vertical-align: super;
+    }
+
+    .date-month {
+      font-size: clamp(38px, 11vw, 55px);
+      font-weight: 700;
+      color: #2C4222;
+      letter-spacing: 6px;
+      line-height: 1;
+    }
+
+    /* ── Details card ── */
+    .details-card {
+      margin: 1.25rem 1.75rem 0;
+      padding: 1.25rem 1.5rem;
+      background: rgba(255, 255, 255, 0.45);
+      border: 0.5px solid rgba(74, 124, 53, 0.3);
+      border-radius: 3px;
+      text-align: center;
+    }
+
+    .detail-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 13px;
+      color: #3A5A2A;
+      padding: 0.4rem 0;
+    }
+
+    .detail-row + .detail-row {
+      border-top: 0.5px solid rgba(74, 124, 53, 0.15);
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 0.9rem;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #8B3A1E;
+      text-decoration: none;
+      border-bottom: 0.5px solid rgba(139, 58, 30, 0.45);
+      padding-bottom: 2px;
+    }
+
+    /* ── Wedding coming soon ── */
+    .wedding-section {
+      text-align: center;
+      padding: 2rem 2rem 0.5rem;
+      opacity: 0.5;
+    }
+
+    .wedding-label {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #4A7C35;
+      margin-bottom: 0.3rem;
+    }
+
+    .wedding-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(40px, 11vw, 54px);
+      color: #2C4222;
+      font-weight: 600;
     }
 
     .coming-soon {
@@ -158,62 +214,215 @@
       font-size: 10px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: #bbb;
-      margin-top: 1.5rem;
+      color: #6A8050;
+      margin-top: 0.3rem;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 2rem 2rem 2.5rem;
     }
 
     .domain {
       font-family: 'Noto Sans Devanagari', sans-serif;
       font-size: 11px;
-      color: #ccc;
-      margin-top: 0.4rem;
+      color: #8AAC70;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
-  <div class="border-stripe top"></div>
 
-  <div class="page">
-    <div class="motif" aria-hidden="true">✦ ✦ ✦</div>
+  <!-- Amaltas botanical header -->
+  <svg class="botanical-top" viewBox="0 0 390 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <radialGradient id="sky" cx="50%" cy="10%" r="90%">
+        <stop offset="0%" stop-color="#cce4f0"/>
+        <stop offset="100%" stop-color="#a8c8dc"/>
+      </radialGradient>
+      <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+      <filter id="softer"><feGaussianBlur stdDeviation="6"/></filter>
+    </defs>
 
+    <!-- Sky -->
+    <rect width="390" height="270" fill="url(#sky)"/>
+
+    <!-- Soft clouds -->
+    <ellipse cx="195" cy="75" rx="100" ry="48" fill="white" opacity="0.65" filter="url(#soft)"/>
+    <ellipse cx="290" cy="55" rx="70" ry="36" fill="white" opacity="0.55" filter="url(#soft)"/>
+    <ellipse cx="100" cy="65" rx="65" ry="32" fill="white" opacity="0.5"  filter="url(#soft)"/>
+    <ellipse cx="50"  cy="90" rx="50" ry="25" fill="white" opacity="0.4"  filter="url(#softer)"/>
+
+    <!-- ── LEFT branch system ── -->
+    <path d="M -15 -5 C 15 35, 28 80, 18 145 C 10 190, 35 225, 28 270" stroke="#4A2810" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <path d="M 16 55  C 55 22, 110 15, 162 32"  stroke="#5A3010" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 20 105 C 58 78, 108 72, 148 84"  stroke="#5A3010" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 22 160 C 52 138, 95 133, 118 146" stroke="#4A2810" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+    <!-- Left leaves — dark green -->
+    <ellipse cx="170" cy="28" rx="30" ry="14" fill="#2D6820" transform="rotate(-22 170 28)"/>
+    <ellipse cx="148" cy="18" rx="25" ry="12" fill="#357828" transform="rotate(-42 148 18)"/>
+    <ellipse cx="120" cy="12" rx="22" ry="10" fill="#2D6820" transform="rotate(-55 120 12)"/>
+    <ellipse cx="92"  cy="10" rx="20" ry="10" fill="#448A30" transform="rotate(-65 92 10)"/>
+    <ellipse cx="145" cy="40" rx="23" ry="11" fill="#357828" transform="rotate(-12 145 40)"/>
+    <!-- Lime highlights -->
+    <ellipse cx="168" cy="20" rx="19" ry="9"  fill="#78B434" transform="rotate(-28 168 20)"/>
+    <ellipse cx="192" cy="15" rx="17" ry="8"  fill="#8CC440" transform="rotate(-15 192 15)"/>
+    <ellipse cx="125" cy="8"  rx="18" ry="8"  fill="#6AA82E" transform="rotate(-50 125 8)"/>
+    <!-- Mid leaves on sub-branch -->
+    <ellipse cx="152" cy="80" rx="25" ry="12" fill="#2D6820" transform="rotate(-18 152 80)"/>
+    <ellipse cx="125" cy="70" rx="21" ry="10" fill="#448A30" transform="rotate(-32 125 70)"/>
+    <ellipse cx="102" cy="74" rx="19" ry="9"  fill="#357828" transform="rotate(8 102 74)"/>
+    <ellipse cx="170" cy="74" rx="23" ry="11" fill="#78B434" transform="rotate(-6 170 74)"/>
+    <!-- Lower left leaves -->
+    <ellipse cx="118" cy="142" rx="23" ry="11" fill="#2D6820" transform="rotate(-22 118 142)"/>
+    <ellipse cx="93"  cy="134" rx="19" ry="9"  fill="#448A30" transform="rotate(6 93 134)"/>
+    <ellipse cx="96"  cy="154" rx="21" ry="10" fill="#6AA82E" transform="rotate(-38 96 154)"/>
+
+    <!-- Left flower clusters (amaltas yellow) -->
+    <g opacity="0.93">
+      <circle cx="158" cy="55"  r="5.5" fill="#D4A020"/>
+      <circle cx="152" cy="63"  r="6"   fill="#E8BA28"/>
+      <circle cx="161" cy="65"  r="5"   fill="#D09018"/>
+      <circle cx="150" cy="73"  r="5"   fill="#C88C10"/>
+      <circle cx="160" cy="74"  r="4.5" fill="#D4A020"/>
+      <circle cx="153" cy="82"  r="4.5" fill="#E0A820"/>
+      <circle cx="162" cy="84"  r="4"   fill="#C88C10"/>
+      <circle cx="155" cy="92"  r="3.5" fill="#D4A020"/>
+      <circle cx="163" cy="93"  r="3"   fill="#E8BA28"/>
+    </g>
+    <g opacity="0.88">
+      <circle cx="126" cy="46"  r="5"   fill="#E8BA28"/>
+      <circle cx="120" cy="54"  r="5.5" fill="#D4A020"/>
+      <circle cx="129" cy="56"  r="5"   fill="#C88C10"/>
+      <circle cx="122" cy="64"  r="4.5" fill="#D4A020"/>
+      <circle cx="131" cy="65"  r="4"   fill="#E0A820"/>
+      <circle cx="124" cy="73"  r="4"   fill="#C88C10"/>
+      <circle cx="132" cy="74"  r="3.5" fill="#D4A020"/>
+      <circle cx="126" cy="81"  r="3"   fill="#E8BA28"/>
+    </g>
+    <g opacity="0.82">
+      <circle cx="103" cy="148" r="4.5" fill="#D4A020"/>
+      <circle cx="97"  cy="156" r="5"   fill="#E8BA28"/>
+      <circle cx="106" cy="157" r="4"   fill="#C88C10"/>
+      <circle cx="100" cy="165" r="4"   fill="#D4A020"/>
+      <circle cx="108" cy="166" r="3.5" fill="#E0A820"/>
+      <circle cx="102" cy="173" r="3"   fill="#C88C10"/>
+    </g>
+
+    <!-- ── RIGHT branch system ── -->
+    <path d="M 405 -5 C 375 35, 362 80, 372 145 C 380 190, 355 225, 362 270" stroke="#4A2810" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <path d="M 374 55  C 335 22, 280 15, 228 32"  stroke="#5A3010" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 370 105 C 332 78, 282 72, 242 84"  stroke="#5A3010" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M 368 160 C 338 138, 295 133, 272 146" stroke="#4A2810" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+    <!-- Right leaves -->
+    <ellipse cx="220" cy="28" rx="30" ry="14" fill="#2D6820" transform="rotate(22 220 28)"/>
+    <ellipse cx="242" cy="18" rx="25" ry="12" fill="#357828" transform="rotate(42 242 18)"/>
+    <ellipse cx="270" cy="12" rx="22" ry="10" fill="#2D6820" transform="rotate(55 270 12)"/>
+    <ellipse cx="298" cy="10" rx="20" ry="10" fill="#448A30" transform="rotate(65 298 10)"/>
+    <ellipse cx="245" cy="40" rx="23" ry="11" fill="#357828" transform="rotate(12 245 40)"/>
+    <ellipse cx="222" cy="20" rx="19" ry="9"  fill="#78B434" transform="rotate(28 222 20)"/>
+    <ellipse cx="198" cy="15" rx="17" ry="8"  fill="#8CC440" transform="rotate(15 198 15)"/>
+    <ellipse cx="265" cy="8"  rx="18" ry="8"  fill="#6AA82E" transform="rotate(50 265 8)"/>
+    <ellipse cx="238" cy="80" rx="25" ry="12" fill="#2D6820" transform="rotate(18 238 80)"/>
+    <ellipse cx="265" cy="70" rx="21" ry="10" fill="#448A30" transform="rotate(32 265 70)"/>
+    <ellipse cx="288" cy="74" rx="19" ry="9"  fill="#357828" transform="rotate(-8 288 74)"/>
+    <ellipse cx="220" cy="74" rx="23" ry="11" fill="#78B434" transform="rotate(6 220 74)"/>
+    <ellipse cx="272" cy="142" rx="23" ry="11" fill="#2D6820" transform="rotate(22 272 142)"/>
+    <ellipse cx="297" cy="134" rx="19" ry="9"  fill="#448A30" transform="rotate(-6 297 134)"/>
+    <ellipse cx="294" cy="154" rx="21" ry="10" fill="#6AA82E" transform="rotate(38 294 154)"/>
+
+    <!-- Right flower clusters -->
+    <g opacity="0.93">
+      <circle cx="232" cy="55"  r="5.5" fill="#D4A020"/>
+      <circle cx="238" cy="63"  r="6"   fill="#E8BA28"/>
+      <circle cx="229" cy="65"  r="5"   fill="#D09018"/>
+      <circle cx="240" cy="73"  r="5"   fill="#C88C10"/>
+      <circle cx="230" cy="74"  r="4.5" fill="#D4A020"/>
+      <circle cx="237" cy="82"  r="4.5" fill="#E0A820"/>
+      <circle cx="228" cy="84"  r="4"   fill="#C88C10"/>
+      <circle cx="235" cy="92"  r="3.5" fill="#D4A020"/>
+      <circle cx="227" cy="93"  r="3"   fill="#E8BA28"/>
+    </g>
+    <g opacity="0.88">
+      <circle cx="264" cy="46"  r="5"   fill="#E8BA28"/>
+      <circle cx="270" cy="54"  r="5.5" fill="#D4A020"/>
+      <circle cx="261" cy="56"  r="5"   fill="#C88C10"/>
+      <circle cx="268" cy="64"  r="4.5" fill="#D4A020"/>
+      <circle cx="259" cy="65"  r="4"   fill="#E0A820"/>
+      <circle cx="266" cy="73"  r="4"   fill="#C88C10"/>
+      <circle cx="258" cy="74"  r="3.5" fill="#D4A020"/>
+      <circle cx="264" cy="81"  r="3"   fill="#E8BA28"/>
+    </g>
+    <g opacity="0.82">
+      <circle cx="287" cy="148" r="4.5" fill="#D4A020"/>
+      <circle cx="293" cy="156" r="5"   fill="#E8BA28"/>
+      <circle cx="284" cy="157" r="4"   fill="#C88C10"/>
+      <circle cx="290" cy="165" r="4"   fill="#D4A020"/>
+      <circle cx="282" cy="166" r="3.5" fill="#E0A820"/>
+      <circle cx="288" cy="173" r="3"   fill="#C88C10"/>
+    </g>
+
+    <!-- Birds -->
+    <path d="M 178 52 C 183 47, 188 47, 193 52" stroke="#1A2E10" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M 192 52 C 197 47, 202 47, 207 52" stroke="#1A2E10" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M 215 40 C 219 36, 223 36, 227 40" stroke="#1A2E10" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <path d="M 226 40 C 230 36, 234 36, 238 40" stroke="#1A2E10" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  </svg>
+
+  <!-- Tagline + families -->
+  <div class="tagline-section">
+    <p class="tagline-quote">Treasures tucked away for us to find</p>
+    <div class="families-text">
+      Dixit <span class="rust">&amp;</span> Sachdeva<br>families invite you
+    </div>
     <p class="hindi-sub">एक नई शुरुआत</p>
+  </div>
 
-    <div class="names">
-      <em>Daksha</em>
-      <span class="ampersand">&</span>
-      <em>Mukul</em>
+  <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+
+  <!-- Names + Roka -->
+  <div class="names-section">
+    <p class="to-text">to</p>
+    <div class="names">DAKSHA <span class="rust">&amp;</span> MUKUL's</div>
+    <div class="roka-script">Roka</div>
+    <p class="roka-hindi">रोका</p>
+  </div>
+
+  <!-- Big date -->
+  <div class="date-section">
+    <span class="date-on">on</span>
+    <div class="date-number">26<sup>th</sup></div>
+    <div class="date-month">JULY</div>
+  </div>
+
+  <!-- Event details -->
+  <div class="details-card">
+    <div class="detail-row">
+      <span>🕔</span>
+      <span>5:00 PM onwards</span>
     </div>
-
-    <p class="tagline">are getting married</p>
-
-    <div class="divider" aria-hidden="true">
-      <div class="divider-line"></div>
-      <div class="divider-dot"></div>
-      <div class="divider-line"></div>
+    <div class="detail-row">
+      <span>📍</span>
+      <span>Apno Ghar, Gurgaon</span>
     </div>
+    <a class="map-link" href="https://maps.app.goo.gl/jzLtpnSUDssejTiPA" target="_blank" rel="noopener">View on Maps ↗</a>
+  </div>
 
-    <div class="events">
-      <div class="event">
-        <span class="event-label-hindi">रोका</span>
-        <span class="event-name">Roka</span>
-      </div>
-      <div class="event-sep" aria-hidden="true">·</div>
-      <div class="event">
-        <span class="event-label-hindi">विवाह</span>
-        <span class="event-name">Wedding</span>
-      </div>
-    </div>
+  <div class="divider" style="margin-top:2rem"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
 
-    <div class="divider" aria-hidden="true">
-      <div class="divider-line"></div>
-      <div class="divider-dot"></div>
-      <div class="divider-line"></div>
-    </div>
-
+  <!-- Wedding -->
+  <div class="wedding-section">
+    <p class="wedding-label">विवाह · Ceremony II</p>
+    <div class="wedding-title">Wedding</div>
     <p class="coming-soon">Details coming soon</p>
+  </div>
+
+  <div class="footer">
     <p class="domain">dakmuk.in</p>
   </div>
 
-  <div class="border-stripe bottom"></div>
 </body>
 </html>
