@@ -606,8 +606,25 @@
     inviteVideo.addEventListener('pause', function () {
       videoPlayBtn.classList.remove('hidden');
     });
+    // Gentle timer-driven scroll (native smooth scroll and rAF are unreliable in some in-app browsers)
+    function glideTo(targetY, duration) {
+      const startY = window.scrollY;
+      const delta = targetY - startY;
+      const start = Date.now();
+      const timer = setInterval(function () {
+        const t = Math.min((Date.now() - start) / duration, 1);
+        const ease = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        window.scrollTo(0, startY + delta * ease);
+        if (t >= 1) clearInterval(timer);
+      }, 16);
+    }
+
     inviteVideo.addEventListener('ended', function () {
       videoPlayBtn.classList.remove('hidden');
+      // Glide down to the invite details — unless the guest already scrolled away
+      if (window.scrollY < 40) {
+        glideTo(document.querySelector('.botanical-top').offsetTop, 1100);
+      }
     });
   </script>
 </body>
