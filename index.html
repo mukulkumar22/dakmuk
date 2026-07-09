@@ -233,8 +233,10 @@
 
     /* ── Invite video ── */
     .video-section {
-      margin: 1.75rem 1.5rem 0;
+      margin: 5.5rem 1.5rem 0;
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
 
     .video-label {
@@ -431,6 +433,18 @@
   <!-- Botanical header — taller viewBox crop to show sky + canopy arch -->
   <img class="botanical-top sway-canopy" src="canopy.jpg" alt="Amaltas trees against the sky" />
 
+  <!-- Invite video -->
+  <div class="video-section">
+    <div class="video-frame">
+      <video id="invite-video" preload="none" poster="couple.jpg" playsinline controls>
+        <source src="invite.mp4" type="video/mp4" />
+      </video>
+      <button class="video-play-btn" id="video-play-btn" aria-label="Play invite video">
+        <span class="play-circle"></span>
+      </button>
+    </div>
+  </div>
+
   <!-- Hero -->
   <div class="hero">
     <p class="tagline-quote">Treasures tucked away for us to find</p>
@@ -490,19 +504,6 @@
     <a class="btn btn-primary" href="https://maps.app.goo.gl/jzLtpnSUDssejTiPA" target="_blank" rel="noopener">View on Maps</a>
     <a class="btn btn-secondary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Daksha+%26+Mukul%27s+Roka&amp;dates=20260726T170000/20260726T210000&amp;ctz=Asia/Kolkata&amp;details=Dixit+%26+Sachdeva+families+invite+you+to+the+Roka+ceremony.+dakmuk.in&amp;location=Apno+Ghar+Resort%2C+NH-8%2C+Gurgaon" target="_blank" rel="noopener">Add to Google Calendar</a>
     <button class="btn-link" id="ics-btn">Apple Calendar (.ics)</button>
-  </div>
-
-  <!-- Invite video -->
-  <div class="video-section">
-    <p class="video-label">Watch our invite</p>
-    <div class="video-frame">
-      <video id="invite-video" preload="none" poster="canopy.jpg" playsinline controls>
-        <source src="invite.mp4" type="video/mp4" />
-      </video>
-      <button class="video-play-btn" id="video-play-btn" aria-label="Play invite video">
-        <span class="play-circle"></span>
-      </button>
-    </div>
   </div>
 
   <p class="closing-line">We can't wait to celebrate with you</p>
