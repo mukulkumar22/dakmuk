@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Daksha & Mukul — Roka</title>
   <meta property="og:title" content="Daksha & Mukul's Roka" />
-  <meta property="og:description" content="Dixit & Sachdeva families invite you — 26th July 2026, Apno Ghar, Gurgaon" />
+  <meta property="og:description" content="Dixit & Sachdeva families invite you — 26th July 2026, Aapno Ghar, Gurgaon" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dakmuk.in/" />
   <meta property="og:image" content="https://dakmuk.in/couple.jpg" />
@@ -347,75 +347,141 @@
   </div>
 
   <!-- Botanical header — taller viewBox crop to show sky + canopy arch -->
-  <svg class="botanical-top" viewBox="0 0 390 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMin slice">
+  <svg class="botanical-top" viewBox="0 0 390 230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
     <defs>
-      <radialGradient id="sky" cx="50%" cy="10%" r="90%">
-        <stop offset="0%" stop-color="#cce4f0"/>
-        <stop offset="100%" stop-color="#a8c8dc"/>
-      </radialGradient>
-      <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
-      <filter id="softer"><feGaussianBlur stdDeviation="6"/></filter>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#A9D3E8"/>
+        <stop offset="100%" stop-color="#C2E2EE"/>
+      </linearGradient>
+      <filter id="soft"><feGaussianBlur stdDeviation="9"/></filter>
     </defs>
-    <rect width="390" height="270" fill="url(#sky)"/>
-    <ellipse cx="195" cy="75" rx="100" ry="48" fill="white" opacity="0.65" filter="url(#soft)"/>
-    <ellipse cx="290" cy="55" rx="70"  ry="36" fill="white" opacity="0.55" filter="url(#soft)"/>
-    <ellipse cx="100" cy="65" rx="65"  ry="32" fill="white" opacity="0.5"  filter="url(#soft)"/>
-    <ellipse cx="50"  cy="90" rx="50"  ry="25" fill="white" opacity="0.4"  filter="url(#softer)"/>
-    <!-- Left branches -->
+
+    <!-- Sky + cloud -->
+    <rect width="390" height="230" fill="url(#sky)"/>
+    <ellipse cx="205" cy="125" rx="125" ry="58" fill="white" opacity="0.85" filter="url(#soft)"/>
+    <ellipse cx="270" cy="90"  rx="90"  ry="42" fill="white" opacity="0.7"  filter="url(#soft)"/>
+    <ellipse cx="140" cy="155" rx="100" ry="45" fill="white" opacity="0.6"  filter="url(#soft)"/>
+
+    <!-- Yellow specks drifting in the sky window -->
+    <g fill="#EFC93A" opacity="0.85">
+      <circle cx="172" cy="92"  r="1.6"/><circle cx="196" cy="72"  r="1.3"/>
+      <circle cx="223" cy="108" r="1.8"/><circle cx="207" cy="132" r="1.3"/>
+      <circle cx="243" cy="86"  r="1.5"/><circle cx="184" cy="118" r="1.2"/>
+      <circle cx="230" cy="140" r="1.4"/><circle cx="160" cy="112" r="1.3"/>
+    </g>
+
+    <!-- ── LEFT canopy ── -->
     <g class="sway-l">
-    <path d="M -15 -5 C 15 35, 28 80, 18 145 C 10 190, 35 225, 28 270" stroke="#4A2810" stroke-width="11" fill="none" stroke-linecap="round"/>
-    <path d="M 16 55  C 55 22, 110 15, 162 32"  stroke="#5A3010" stroke-width="7" fill="none" stroke-linecap="round"/>
-    <path d="M 20 105 C 58 78, 108 72, 148 84"  stroke="#5A3010" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M 22 160 C 52 138, 95 133, 118 146" stroke="#4A2810" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <ellipse cx="170" cy="28" rx="30" ry="14" fill="#2D6820" transform="rotate(-22 170 28)"/>
-    <ellipse cx="148" cy="18" rx="25" ry="12" fill="#357828" transform="rotate(-42 148 18)"/>
-    <ellipse cx="120" cy="12" rx="22" ry="10" fill="#2D6820" transform="rotate(-55 120 12)"/>
-    <ellipse cx="92"  cy="10" rx="20" ry="10" fill="#448A30" transform="rotate(-65 92 10)"/>
-    <ellipse cx="145" cy="40" rx="23" ry="11" fill="#357828" transform="rotate(-12 145 40)"/>
-    <ellipse cx="168" cy="20" rx="19" ry="9"  fill="#78B434" transform="rotate(-28 168 20)"/>
-    <ellipse cx="192" cy="15" rx="17" ry="8"  fill="#8CC440" transform="rotate(-15 192 15)"/>
-    <ellipse cx="125" cy="8"  rx="18" ry="8"  fill="#6AA82E" transform="rotate(-50 125 8)"/>
-    <ellipse cx="152" cy="80" rx="25" ry="12" fill="#2D6820" transform="rotate(-18 152 80)"/>
-    <ellipse cx="125" cy="70" rx="21" ry="10" fill="#448A30" transform="rotate(-32 125 70)"/>
-    <ellipse cx="102" cy="74" rx="19" ry="9"  fill="#357828" transform="rotate(8 102 74)"/>
-    <ellipse cx="170" cy="74" rx="23" ry="11" fill="#78B434" transform="rotate(-6 170 74)"/>
-    <ellipse cx="118" cy="142" rx="23" ry="11" fill="#2D6820" transform="rotate(-22 118 142)"/>
-    <ellipse cx="93"  cy="134" rx="19" ry="9"  fill="#448A30" transform="rotate(6 93 134)"/>
-    <ellipse cx="96"  cy="154" rx="21" ry="10" fill="#6AA82E" transform="rotate(-38 96 154)"/>
-    <g opacity="0.93"><circle cx="158" cy="55" r="5.5" fill="#D4A020"/><circle cx="152" cy="63" r="6" fill="#E8BA28"/><circle cx="161" cy="65" r="5" fill="#D09018"/><circle cx="150" cy="73" r="5" fill="#C88C10"/><circle cx="160" cy="74" r="4.5" fill="#D4A020"/><circle cx="153" cy="82" r="4.5" fill="#E0A820"/><circle cx="162" cy="84" r="4" fill="#C88C10"/><circle cx="155" cy="92" r="3.5" fill="#D4A020"/><circle cx="163" cy="93" r="3" fill="#E8BA28"/></g>
-    <g opacity="0.88"><circle cx="126" cy="46" r="5" fill="#E8BA28"/><circle cx="120" cy="54" r="5.5" fill="#D4A020"/><circle cx="129" cy="56" r="5" fill="#C88C10"/><circle cx="122" cy="64" r="4.5" fill="#D4A020"/><circle cx="131" cy="65" r="4" fill="#E0A820"/><circle cx="124" cy="73" r="4" fill="#C88C10"/><circle cx="132" cy="74" r="3.5" fill="#D4A020"/><circle cx="126" cy="81" r="3" fill="#E8BA28"/></g>
-    <g opacity="0.82"><circle cx="103" cy="148" r="4.5" fill="#D4A020"/><circle cx="97" cy="156" r="5" fill="#E8BA28"/><circle cx="106" cy="157" r="4" fill="#C88C10"/><circle cx="100" cy="165" r="4" fill="#D4A020"/><circle cx="108" cy="166" r="3.5" fill="#E0A820"/><circle cx="102" cy="173" r="3" fill="#C88C10"/></g>
+      <!-- top-left clump : lime halo -->
+      <ellipse cx="40"  cy="18" rx="72" ry="50" fill="#DFEE6B"/>
+      <ellipse cx="112" cy="6"  rx="62" ry="38" fill="#E6F276"/>
+      <ellipse cx="16"  cy="72" rx="56" ry="42" fill="#DFEE6B"/>
+      <!-- mid green -->
+      <ellipse cx="34"  cy="10" rx="58" ry="38" fill="#6CAB3B"/>
+      <ellipse cx="102" cy="0"  rx="48" ry="28" fill="#5C9C34"/>
+      <ellipse cx="10"  cy="62" rx="45" ry="33" fill="#6CAB3B"/>
+      <!-- dark cores -->
+      <ellipse cx="62"  cy="-4" rx="42" ry="22" fill="#38761F"/>
+      <ellipse cx="0"   cy="30" rx="36" ry="27" fill="#2E661B"/>
+      <ellipse cx="30"  cy="42" rx="24" ry="16" fill="#38761F"/>
+      <!-- hidden branch -->
+      <path d="M 56 4 L 78 22" stroke="#4A3A18" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+      <!-- strand lines -->
+      <path d="M -12 22 Q 30 34 74 20"  stroke="#2A5414" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <path d="M 6 52  Q 48 44 88 30"   stroke="#2A5414" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <path d="M -6 78 Q 34 66 70 52"   stroke="#2A5414" stroke-width="0.8" fill="none" opacity="0.45"/>
+      <path d="M 40 4  Q 78 12 118 4"   stroke="#2A5414" stroke-width="0.8" fill="none" opacity="0.45"/>
+      <path d="M 14 96 Q 44 86 66 70"   stroke="#C8E058" stroke-width="0.9" fill="none" opacity="0.6"/>
+      <!-- light leaf accents -->
+      <ellipse cx="52" cy="28" rx="9" ry="4" fill="#A8D45A" transform="rotate(-24 52 28)"/>
+      <ellipse cx="18" cy="14" rx="8" ry="3.5" fill="#A8D45A" transform="rotate(18 18 14)"/>
+      <!-- amaltas bunch : speckled -->
+      <ellipse cx="98" cy="52" rx="17" ry="26" fill="#D8B428" opacity="0.14"/>
+      <g fill="#F2CB2E">
+        <circle cx="92" cy="36" r="2.4"/><circle cx="101" cy="40" r="2"/><circle cx="96" cy="46" r="2.6"/>
+        <circle cx="105" cy="50" r="2.2"/><circle cx="90" cy="55" r="2.4"/><circle cx="99" cy="59" r="2"/>
+        <circle cx="93" cy="66" r="2.2"/><circle cx="102" cy="68" r="1.8"/><circle cx="96" cy="74" r="1.9"/>
+      </g>
+      <g fill="#C99514">
+        <circle cx="97" cy="41" r="1.7"/><circle cx="91" cy="49" r="1.6"/><circle cx="103" cy="56" r="1.7"/>
+        <circle cx="95" cy="62" r="1.5"/><circle cx="100" cy="72" r="1.4"/>
+      </g>
+      <!-- left-edge clump -->
+      <ellipse cx="-8"  cy="150" rx="52" ry="46" fill="#DFEE6B"/>
+      <ellipse cx="-14" cy="144" rx="43" ry="37" fill="#6CAB3B"/>
+      <ellipse cx="-20" cy="140" rx="30" ry="26" fill="#2E661B"/>
+      <path d="M -14 144 L 6 152" stroke="#4A3A18" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+      <path d="M -16 124 Q 14 130 38 146" stroke="#2A5414" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <path d="M -12 168 Q 12 162 32 150" stroke="#C8E058" stroke-width="0.9" fill="none" opacity="0.55"/>
+      <ellipse cx="24" cy="166" rx="12" ry="19" fill="#D8B428" opacity="0.14"/>
+      <g fill="#F2CB2E">
+        <circle cx="20" cy="154" r="2.2"/><circle cx="28" cy="158" r="1.9"/><circle cx="22" cy="164" r="2.3"/>
+        <circle cx="29" cy="170" r="2"/><circle cx="20" cy="175" r="1.9"/><circle cx="26" cy="180" r="1.6"/>
+      </g>
+      <g fill="#C99514">
+        <circle cx="25" cy="161" r="1.5"/><circle cx="21" cy="170" r="1.4"/><circle cx="28" cy="176" r="1.3"/>
+      </g>
     </g>
-    <!-- Right branches -->
+
+    <!-- ── RIGHT canopy ── -->
     <g class="sway-r">
-    <path d="M 405 -5 C 375 35, 362 80, 372 145 C 380 190, 355 225, 362 270" stroke="#4A2810" stroke-width="11" fill="none" stroke-linecap="round"/>
-    <path d="M 374 55  C 335 22, 280 15, 228 32"  stroke="#5A3010" stroke-width="7" fill="none" stroke-linecap="round"/>
-    <path d="M 370 105 C 332 78, 282 72, 242 84"  stroke="#5A3010" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <path d="M 368 160 C 338 138, 295 133, 272 146" stroke="#4A2810" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <ellipse cx="220" cy="28" rx="30" ry="14" fill="#2D6820" transform="rotate(22 220 28)"/>
-    <ellipse cx="242" cy="18" rx="25" ry="12" fill="#357828" transform="rotate(42 242 18)"/>
-    <ellipse cx="270" cy="12" rx="22" ry="10" fill="#2D6820" transform="rotate(55 270 12)"/>
-    <ellipse cx="298" cy="10" rx="20" ry="10" fill="#448A30" transform="rotate(65 298 10)"/>
-    <ellipse cx="245" cy="40" rx="23" ry="11" fill="#357828" transform="rotate(12 245 40)"/>
-    <ellipse cx="222" cy="20" rx="19" ry="9"  fill="#78B434" transform="rotate(28 222 20)"/>
-    <ellipse cx="198" cy="15" rx="17" ry="8"  fill="#8CC440" transform="rotate(15 198 15)"/>
-    <ellipse cx="265" cy="8"  rx="18" ry="8"  fill="#6AA82E" transform="rotate(50 265 8)"/>
-    <ellipse cx="238" cy="80" rx="25" ry="12" fill="#2D6820" transform="rotate(18 238 80)"/>
-    <ellipse cx="265" cy="70" rx="21" ry="10" fill="#448A30" transform="rotate(32 265 70)"/>
-    <ellipse cx="288" cy="74" rx="19" ry="9"  fill="#357828" transform="rotate(-8 288 74)"/>
-    <ellipse cx="220" cy="74" rx="23" ry="11" fill="#78B434" transform="rotate(6 220 74)"/>
-    <ellipse cx="272" cy="142" rx="23" ry="11" fill="#2D6820" transform="rotate(22 272 142)"/>
-    <ellipse cx="297" cy="134" rx="19" ry="9"  fill="#448A30" transform="rotate(-6 297 134)"/>
-    <ellipse cx="294" cy="154" rx="21" ry="10" fill="#6AA82E" transform="rotate(38 294 154)"/>
-    <g opacity="0.93"><circle cx="232" cy="55" r="5.5" fill="#D4A020"/><circle cx="238" cy="63" r="6" fill="#E8BA28"/><circle cx="229" cy="65" r="5" fill="#D09018"/><circle cx="240" cy="73" r="5" fill="#C88C10"/><circle cx="230" cy="74" r="4.5" fill="#D4A020"/><circle cx="237" cy="82" r="4.5" fill="#E0A820"/><circle cx="228" cy="84" r="4" fill="#C88C10"/><circle cx="235" cy="92" r="3.5" fill="#D4A020"/><circle cx="227" cy="93" r="3" fill="#E8BA28"/></g>
-    <g opacity="0.88"><circle cx="264" cy="46" r="5" fill="#E8BA28"/><circle cx="270" cy="54" r="5.5" fill="#D4A020"/><circle cx="261" cy="56" r="5" fill="#C88C10"/><circle cx="268" cy="64" r="4.5" fill="#D4A020"/><circle cx="259" cy="65" r="4" fill="#E0A820"/><circle cx="266" cy="73" r="4" fill="#C88C10"/><circle cx="258" cy="74" r="3.5" fill="#D4A020"/><circle cx="264" cy="81" r="3" fill="#E8BA28"/></g>
-    <g opacity="0.82"><circle cx="287" cy="148" r="4.5" fill="#D4A020"/><circle cx="293" cy="156" r="5" fill="#E8BA28"/><circle cx="284" cy="157" r="4" fill="#C88C10"/><circle cx="290" cy="165" r="4" fill="#D4A020"/><circle cx="282" cy="166" r="3.5" fill="#E0A820"/><circle cx="288" cy="173" r="3" fill="#C88C10"/></g>
+      <!-- top-right clump -->
+      <ellipse cx="258" cy="14" rx="76" ry="44" fill="#DFEE6B"/>
+      <ellipse cx="330" cy="28" rx="66" ry="48" fill="#E6F276"/>
+      <ellipse cx="204" cy="2"  rx="46" ry="30" fill="#DFEE6B"/>
+      <ellipse cx="262" cy="6"  rx="62" ry="34" fill="#6CAB3B"/>
+      <ellipse cx="332" cy="20" rx="54" ry="38" fill="#5C9C34"/>
+      <ellipse cx="296" cy="-2" rx="46" ry="20" fill="#38761F"/>
+      <ellipse cx="358" cy="12" rx="38" ry="27" fill="#2E661B"/>
+      <ellipse cx="322" cy="38" rx="24" ry="15" fill="#38761F"/>
+      <path d="M 324 8 L 304 28" stroke="#4A3A18" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+      <path d="M 400 24 Q 356 36 314 22"  stroke="#2A5414" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <path d="M 382 54 Q 340 46 300 32"  stroke="#2A5414" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <path d="M 348 6  Q 310 14 270 6"   stroke="#2A5414" stroke-width="0.8" fill="none" opacity="0.45"/>
+      <path d="M 372 78 Q 342 68 320 52"  stroke="#C8E058" stroke-width="0.9" fill="none" opacity="0.6"/>
+      <ellipse cx="336" cy="30" rx="9" ry="4" fill="#A8D45A" transform="rotate(24 336 30)"/>
+      <ellipse cx="372" cy="16" rx="8" ry="3.5" fill="#A8D45A" transform="rotate(-18 372 16)"/>
+      <!-- hanging amaltas bunches -->
+      <ellipse cx="290" cy="54" rx="18" ry="28" fill="#D8B428" opacity="0.14"/>
+      <g fill="#F2CB2E">
+        <circle cx="284" cy="36" r="2.5"/><circle cx="294" cy="40" r="2.1"/><circle cx="288" cy="47" r="2.6"/>
+        <circle cx="297" cy="52" r="2.3"/><circle cx="282" cy="57" r="2.4"/><circle cx="291" cy="62" r="2.1"/>
+        <circle cx="285" cy="69" r="2.2"/><circle cx="295" cy="71" r="1.8"/><circle cx="289" cy="78" r="1.9"/>
+      </g>
+      <g fill="#C99514">
+        <circle cx="289" cy="43" r="1.7"/><circle cx="283" cy="51" r="1.6"/><circle cx="296" cy="59" r="1.7"/>
+        <circle cx="287" cy="64" r="1.5"/><circle cx="292" cy="74" r="1.4"/>
+      </g>
+      <ellipse cx="352" cy="66" rx="14" ry="22" fill="#D8B428" opacity="0.14"/>
+      <g fill="#F2CB2E">
+        <circle cx="348" cy="52" r="2.2"/><circle cx="356" cy="56" r="1.9"/><circle cx="350" cy="62" r="2.3"/>
+        <circle cx="357" cy="68" r="2"/><circle cx="348" cy="73" r="1.9"/><circle cx="354" cy="79" r="1.7"/>
+      </g>
+      <g fill="#C99514">
+        <circle cx="353" cy="59" r="1.5"/><circle cx="349" cy="68" r="1.4"/><circle cx="356" cy="74" r="1.3"/>
+      </g>
+      <!-- right-edge clump -->
+      <ellipse cx="398" cy="140" rx="52" ry="46" fill="#DFEE6B"/>
+      <ellipse cx="404" cy="134" rx="43" ry="37" fill="#6CAB3B"/>
+      <ellipse cx="410" cy="130" rx="30" ry="26" fill="#2E661B"/>
+      <path d="M 404 134 L 384 142" stroke="#4A3A18" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+      <path d="M 406 114 Q 376 120 352 136" stroke="#2A5414" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <path d="M 402 158 Q 378 152 358 140" stroke="#C8E058" stroke-width="0.9" fill="none" opacity="0.55"/>
+      <ellipse cx="366" cy="156" rx="12" ry="19" fill="#D8B428" opacity="0.14"/>
+      <g fill="#F2CB2E">
+        <circle cx="362" cy="144" r="2.2"/><circle cx="370" cy="148" r="1.9"/><circle cx="364" cy="154" r="2.3"/>
+        <circle cx="371" cy="160" r="2"/><circle cx="362" cy="165" r="1.9"/><circle cx="368" cy="170" r="1.6"/>
+      </g>
+      <g fill="#C99514">
+        <circle cx="367" cy="151" r="1.5"/><circle cx="363" cy="160" r="1.4"/><circle cx="370" cy="166" r="1.3"/>
+      </g>
     </g>
+
     <!-- Birds -->
-    <path d="M 178 52 C 183 47, 188 47, 193 52" stroke="#1A2E10" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-    <path d="M 192 52 C 197 47, 202 47, 207 52" stroke="#1A2E10" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-    <path d="M 215 40 C 219 36, 223 36, 227 40" stroke="#1A2E10" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <path d="M 226 40 C 230 36, 234 36, 238 40" stroke="#1A2E10" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <path d="M 176 78 C 181 73, 186 73, 191 78" stroke="#1A2E10" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+    <path d="M 190 78 C 195 73, 200 73, 205 78" stroke="#1A2E10" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+    <path d="M 222 60 C 226 56, 230 56, 234 60" stroke="#1A2E10" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <path d="M 233 60 C 237 56, 241 56, 245 60" stroke="#1A2E10" stroke-width="1.3" fill="none" stroke-linecap="round"/>
   </svg>
 
   <!-- Hero -->
@@ -469,7 +535,7 @@
     <div class="info-rule"></div>
 
     <div class="detail-row"><span>🕔</span><span>5:00 PM onwards</span></div>
-    <div class="detail-row"><span>📍</span><span>Apno Ghar, Gurgaon</span></div>
+    <div class="detail-row"><span>📍</span><span>Aapno Ghar, Gurgaon</span></div>
   </div>
 
   <!-- Buttons -->
@@ -538,7 +604,7 @@
         'DTEND;TZID=Asia/Kolkata:20260726T210000',
         'SUMMARY:Daksha & Mukul\'s Roka',
         'DESCRIPTION:Dixit & Sachdeva families invite you to the Roka ceremony.',
-        'LOCATION:Apno Ghar Resort\\, NH-8\\, Gurgaon',
+        'LOCATION:Aapno Ghar Resort\\, NH-8\\, Gurgaon',
         'END:VEVENT','END:VCALENDAR'
       ].join('\r\n');
       const a = document.createElement('a');
