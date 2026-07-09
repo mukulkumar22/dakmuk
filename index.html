@@ -233,7 +233,7 @@
 
     /* ── Invite video ── */
     .video-section {
-      margin: 1.5rem 0 0;
+      margin: 0;
       text-align: center;
       position: relative;
       z-index: 2;
@@ -251,15 +251,16 @@
     .video-frame {
       position: relative;
       width: 100%;
+      height: 100vh;
+      height: 100dvh;
       overflow: hidden;
-      box-shadow: 0 8px 28px rgba(44, 66, 34, 0.18);
       background: #000;
     }
 
     .video-frame video {
       display: block;
       width: 100%;
-      aspect-ratio: 9 / 16;
+      height: 100%;
       object-fit: cover;
     }
 
@@ -428,10 +429,7 @@
     <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div>
   </div>
 
-  <!-- Botanical header — taller viewBox crop to show sky + canopy arch -->
-  <img class="botanical-top sway-canopy" src="canopy.jpg" alt="Amaltas trees against the sky" />
-
-  <!-- Invite video -->
+  <!-- Invite video — full-screen landing -->
   <div class="video-section">
     <div class="video-frame">
       <video id="invite-video" preload="auto" poster="canopy.jpg" playsinline controls autoplay muted>
@@ -442,6 +440,9 @@
       </button>
     </div>
   </div>
+
+  <!-- Botanical header — taller viewBox crop to show sky + canopy arch -->
+  <img class="botanical-top sway-canopy" src="canopy.jpg" alt="Amaltas trees against the sky" />
 
   <!-- Hero -->
   <div class="hero">
