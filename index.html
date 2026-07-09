@@ -36,6 +36,12 @@
       max-height: 260px;
       object-fit: cover;
       object-position: center top;
+      -webkit-mask-image: linear-gradient(180deg, black 78%, transparent 100%),
+        linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+      -webkit-mask-composite: source-in;
+      mask-image: linear-gradient(180deg, black 78%, transparent 100%),
+        linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+      mask-composite: intersect;
     }
 
     /* ── Hero ── */
