@@ -231,6 +231,68 @@
       padding: 0.2rem;
     }
 
+    /* ── Invite video ── */
+    .video-section {
+      margin: 1.75rem 1.5rem 0;
+      text-align: center;
+    }
+
+    .video-label {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #6A8050;
+      margin-bottom: 0.7rem;
+    }
+
+    .video-frame {
+      position: relative;
+      max-width: 280px;
+      margin: 0 auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(44, 66, 34, 0.18);
+      background: #000;
+    }
+
+    .video-frame video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+    }
+
+    .video-play-btn {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 30, 15, 0.28);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .video-play-btn .play-circle {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    }
+
+    .video-play-btn .play-circle::after {
+      content: '';
+      border-style: solid;
+      border-width: 9px 0 9px 15px;
+      border-color: transparent transparent transparent #2C4222;
+      margin-left: 3px;
+    }
+
+    .video-play-btn.hidden { display: none; }
+
     /* ── Footer with botanical motif ── */
     .footer {
       text-align: center;
@@ -430,6 +492,19 @@
     <button class="btn-link" id="ics-btn">Apple Calendar (.ics)</button>
   </div>
 
+  <!-- Invite video -->
+  <div class="video-section">
+    <p class="video-label">Watch our invite</p>
+    <div class="video-frame">
+      <video id="invite-video" preload="none" poster="canopy.jpg" playsinline controls>
+        <source src="invite.mp4" type="video/mp4" />
+      </video>
+      <button class="video-play-btn" id="video-play-btn" aria-label="Play invite video">
+        <span class="play-circle"></span>
+      </button>
+    </div>
+  </div>
+
   <p class="closing-line">We can't wait to celebrate with you</p>
 
   <!-- Daksha & Mukul in the grass -->
@@ -515,6 +590,17 @@
         couple.appendChild(h);
         setTimeout(() => h.remove(), 1500 + i * 100);
       }
+    });
+
+    // Tap-to-play invite video (lazy loads on demand)
+    const inviteVideo = document.getElementById('invite-video');
+    const videoPlayBtn = document.getElementById('video-play-btn');
+    videoPlayBtn.addEventListener('click', function () {
+      videoPlayBtn.classList.add('hidden');
+      inviteVideo.play();
+    });
+    inviteVideo.addEventListener('pause', function () {
+      videoPlayBtn.classList.remove('hidden');
     });
   </script>
 </body>
