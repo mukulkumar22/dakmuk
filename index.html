@@ -233,7 +233,7 @@
 
     /* ── Invite video ── */
     .video-section {
-      margin: 3.5rem 1.5rem 0;
+      margin: 1.5rem 0 0;
       text-align: center;
       position: relative;
       z-index: 2;
@@ -250,9 +250,7 @@
 
     .video-frame {
       position: relative;
-      max-width: 280px;
-      margin: 0 auto;
-      border-radius: 10px;
+      width: 100%;
       overflow: hidden;
       box-shadow: 0 8px 28px rgba(44, 66, 34, 0.18);
       background: #000;
@@ -436,7 +434,7 @@
   <!-- Invite video -->
   <div class="video-section">
     <div class="video-frame">
-      <video id="invite-video" preload="none" poster="canopy.jpg" playsinline controls>
+      <video id="invite-video" preload="auto" poster="canopy.jpg" playsinline controls autoplay muted>
         <source src="invite.mp4" type="video/mp4" />
       </video>
       <button class="video-play-btn" id="video-play-btn" aria-label="Play invite video">
@@ -593,14 +591,21 @@
       }
     });
 
-    // Tap-to-play invite video (lazy loads on demand)
+    // Invite video: autoplays muted; tap unmutes and (re)plays
     const inviteVideo = document.getElementById('invite-video');
     const videoPlayBtn = document.getElementById('video-play-btn');
     videoPlayBtn.addEventListener('click', function () {
+      inviteVideo.muted = false;
       videoPlayBtn.classList.add('hidden');
       inviteVideo.play();
     });
+    inviteVideo.addEventListener('playing', function () {
+      videoPlayBtn.classList.add('hidden');
+    });
     inviteVideo.addEventListener('pause', function () {
+      videoPlayBtn.classList.remove('hidden');
+    });
+    inviteVideo.addEventListener('ended', function () {
       videoPlayBtn.classList.remove('hidden');
     });
   </script>
