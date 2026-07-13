@@ -19,14 +19,25 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* Backdrop behind the centered column on wide screens */
+    html {
+      background: linear-gradient(180deg, #b4d0e0 0%, #d4e8d8 45%, #e8ecd8 100%) fixed;
+    }
+
     body {
       min-height: 100vh;
+      max-width: 480px;
+      margin: 0 auto;
       background: linear-gradient(180deg,
         #b4d0e0 0%, #c4dce4 10%, #d4e8d8 28%,
         #e4f0d8 50%, #eef4e4 70%, #f4f0e0 100%
       );
       font-family: 'Playfair Display', Georgia, serif;
       color: #2C4222;
+    }
+
+    @media (min-width: 500px) {
+      body { box-shadow: 0 0 44px rgba(44, 66, 34, 0.18); }
     }
 
     /* ── Botanical header — taller so canopy arches overhead ── */
@@ -250,9 +261,13 @@
 
     .video-frame {
       position: relative;
-      width: 100%;
-      height: 100vh;
-      height: 100dvh;
+      /* exact 9:16 — video is never cropped; capped at one viewport height */
+      aspect-ratio: 9 / 16;
+      width: min(100%, calc(100vh * 9 / 16));
+      width: min(100%, calc(100dvh * 9 / 16));
+      max-height: 100vh;
+      max-height: 100dvh;
+      margin: 0 auto;
       overflow: hidden;
       background: #000;
     }
