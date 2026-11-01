@@ -215,9 +215,8 @@ main {
 .credits a { color: var(--ink-soft); }
 
 /* ── Footer ── */
-.footer { text-align: center; padding: 30px 20px 6px; display: grid; justify-items: center; gap: 6px; }
-.footer svg { width: 44px; height: 40px; fill: var(--sand); }
-.domain { font-family: var(--sans); font-size: 12px; letter-spacing: 1px; color: var(--ink-soft); }
+.footer { text-align: center; padding: 34px 20px 6px; display: grid; justify-items: center; }
+.footer .logo { width: 170px; height: auto; }
 
 /* ── Motion ── */
 .rise { animation: rise 0.7s ease-out both; }
@@ -239,3 +238,44 @@ main {
 .links a:focus-visible { outline: 2px solid var(--peacock); outline-offset: 2px; }
 .chip-wiki { color: var(--peacock); border: 1px solid rgba(31, 110, 115, 0.35); }
 .chip-map { color: var(--sindoor); border: 1px solid rgba(184, 50, 42, 0.35); }
+
+/* ── Language switch (EN | हिं) ── */
+.lang-switch {
+  position: fixed; z-index: 25;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  right: max(12px, calc(50% - 240px + 12px));
+  display: flex; border-radius: 999px; overflow: hidden;
+  background: rgba(251, 247, 238, 0.9);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  border: 1px solid var(--rule);
+  box-shadow: 0 2px 10px rgba(40, 25, 15, 0.12);
+}
+.lang-switch a {
+  font-family: 'Inter', 'Noto Sans Devanagari', system-ui, sans-serif;
+  font-size: 13px; font-weight: 600; text-decoration: none;
+  color: var(--ink-soft); padding: 6px 12px; line-height: 1.2;
+}
+.lang-switch a[aria-current="true"] { background: var(--palash); color: #fff; }
+.lang-switch a:focus-visible { outline: 2px solid var(--peacock); outline-offset: -2px; }
+
+/* ── Hindi pages: Devanagari faces, no letter-spacing (it breaks the shirorekha) ── */
+html[lang="hi"] {
+  --serif: 'Tiro Devanagari Hindi', 'Playfair Display', Georgia, serif;
+  --script: 'Kalam', 'Tiro Devanagari Hindi', cursive;
+  --sans: 'Noto Sans Devanagari', 'Inter', system-ui, sans-serif;
+}
+html[lang="hi"] :is(.kicker, .day-label, .row h3, .place-card h3, .btn, .glance-row b, .glance-more, .tab, .date-month, .date-big, .links a, .text-link) {
+  letter-spacing: 0; text-transform: none;
+}
+html[lang="hi"] .kicker { font-size: 13px; }
+html[lang="hi"] .btn { font-size: 15px; padding: 12px 16px; }
+html[lang="hi"] .row h3, html[lang="hi"] .place-card h3 { font-size: 15px; }
+html[lang="hi"] .day-label { font-size: 13px; }
+html[lang="hi"] .tab { font-size: 12px; }
+html[lang="hi"] .hero .names { line-height: 1.15; font-size: clamp(50px, 15vw, 62px); }
+html[lang="hi"] .hero .invite-line { font-style: normal; font-size: clamp(15px, 4.4vw, 17px); }
+html[lang="hi"] .script-title { line-height: 1.2; }
+html[lang="hi"] .section-title { font-size: 32px; }
+html[lang="hi"] .date-month { font-size: clamp(22px, 6.5vw, 28px); }
+html[lang="hi"] :is(.place, .note, .closing-line) { font-style: normal; }
+html[lang="hi"] .prose { font-size: 18px; line-height: 1.8; }
