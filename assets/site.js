@@ -26,24 +26,3 @@ if (countdown) {
     countdown.textContent = document.documentElement.lang === 'hi' ? days + ' दिन बाकी' : days + (days === 1 ? ' day to go' : ' days to go');
   }
 }
-
-// Tap the couple → hearts float up
-const couple = document.getElementById('couple');
-if (couple) {
-  const heartChars = ['🧡', '🤍', '💛'];
-  couple.addEventListener('click', function (e) {
-    const rect = couple.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    for (let i = 0; i < 3; i++) {
-      const h = document.createElement('span');
-      h.className = 'heart';
-      h.textContent = heartChars[Math.floor(Math.random() * heartChars.length)];
-      h.style.left = (x - 10 + (i - 1) * 22) + 'px';
-      h.style.top = (y - 10 - i * 6) + 'px';
-      h.style.animationDelay = (i * 0.1) + 's';
-      couple.appendChild(h);
-      setTimeout(() => h.remove(), 1500 + i * 100);
-    }
-  });
-}

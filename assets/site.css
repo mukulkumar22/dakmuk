@@ -9,6 +9,7 @@
   --ink: #4a3426;
   --ink-soft: #7a6252;
   --palash: #e4572e;
+  --palash-deep: #c8461f; /* palash dark enough for white button text */
   --sindoor: #b8322a;
   --peacock: #1f6e73;
   --mustard-wash: #f7e6ad;
@@ -76,12 +77,12 @@ main {
 }
 .btn:active { opacity: 0.75; }
 .btn:focus-visible, .tab:focus-visible, .text-link:focus-visible { outline: 2px solid var(--peacock); outline-offset: 3px; }
-.btn-fill { background: var(--palash); color: #fff; }
+.btn-fill { background: var(--palash-deep); color: #fff; }
 .btn-line { background: transparent; border-color: rgba(74, 52, 38, 0.35); color: var(--ink); }
 .text-link {
   background: none; border: none; cursor: pointer; justify-self: center;
   font-family: var(--sans); font-size: 12px; letter-spacing: 1px; color: var(--peacock);
-  text-decoration: underline; text-underline-offset: 3px; padding: 4px;
+  text-decoration: underline; text-underline-offset: 3px; padding: 14px 16px;
 }
 
 /* ── Bottom tab bar ── */
@@ -100,7 +101,7 @@ main {
   color: var(--ink-soft); padding: 4px 0;
 }
 .tab svg { width: 24px; height: 24px; }
-.tab[aria-current="page"] { color: var(--palash); }
+.tab[aria-current="page"] { color: var(--sindoor); }
 
 /* ── Falling palash petals ── */
 .petals { position: fixed; inset: 0; pointer-events: none; z-index: 5; overflow: hidden; }
@@ -153,15 +154,6 @@ main {
 .place { font-style: italic; color: var(--peacock); font-size: 17px; margin-top: 6px; }
 
 .closing-line { text-align: center; font-style: italic; font-size: 16px; color: var(--ink-soft); padding: 36px 24px 8px; }
-.couple { position: relative; cursor: pointer; }
-.couple img {
-  width: 100%;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 20%, black 86%, transparent 100%);
-  mask-image: linear-gradient(180deg, transparent 0%, black 20%, black 86%, transparent 100%);
-}
-.couple-hint { position: absolute; bottom: 12px; left: 0; right: 0; text-align: center; font-style: italic; font-size: 11px; color: rgba(255, 255, 255, 0.8); pointer-events: none; }
-.heart { position: absolute; font-size: 18px; pointer-events: none; z-index: 6; animation: floatUp 1.2s ease-out forwards; }
-@keyframes floatUp { from { transform: translateY(0) scale(0.7); opacity: 1; } to { transform: translateY(-80px) scale(1.5); opacity: 0; } }
 
 /* ── Schedule ── */
 .day { margin: 0 18px; }
@@ -279,9 +271,9 @@ main {
 .chip-wiki { color: var(--peacock); border: 1px solid rgba(31, 110, 115, 0.35); }
 .chip-map { color: var(--sindoor); border: 1px solid rgba(184, 50, 42, 0.35); }
 
-/* ── Language switch (EN | हिं) ── */
+/* ── Language switch (EN | हिं): scrolls away with the page so it never covers content ── */
 .lang-switch {
-  position: fixed; z-index: 25;
+  position: absolute; z-index: 25;
   top: calc(env(safe-area-inset-top, 0px) + 12px);
   right: max(12px, calc(50% - 240px + 12px));
   display: flex; border-radius: 999px; overflow: hidden;
@@ -292,10 +284,11 @@ main {
 }
 .lang-switch a {
   font-family: 'Inter', 'Noto Sans Devanagari', system-ui, sans-serif;
-  font-size: 13px; font-weight: 600; text-decoration: none;
-  color: var(--ink-soft); padding: 6px 12px; line-height: 1.2;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  color: var(--ink-soft); padding: 0 15px; line-height: 1.2;
+  min-height: 44px; min-width: 48px; display: flex; align-items: center; justify-content: center;
 }
-.lang-switch a[aria-current="true"] { background: var(--palash); color: #fff; }
+.lang-switch a[aria-current="true"] { background: var(--palash-deep); color: #fff; }
 .lang-switch a:focus-visible { outline: 2px solid var(--peacock); outline-offset: -2px; }
 
 /* ── Hindi pages: Devanagari faces, no letter-spacing (it breaks the shirorekha) ── */
