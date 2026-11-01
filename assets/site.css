@@ -229,3 +229,13 @@ main {
   .petal { animation: none; display: none; }
   .rise { animation: none; }
 }
+
+/* Wikipedia / map links under each place */
+.links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.links a {
+  font-family: var(--sans); font-size: 12px; font-weight: 600; text-decoration: none;
+  padding: 5px 10px; border-radius: 999px; white-space: nowrap;
+}
+.links a:focus-visible { outline: 2px solid var(--peacock); outline-offset: 2px; }
+.chip-wiki { color: var(--peacock); border: 1px solid rgba(31, 110, 115, 0.35); }
+.chip-map { color: var(--sindoor); border: 1px solid rgba(184, 50, 42, 0.35); }
