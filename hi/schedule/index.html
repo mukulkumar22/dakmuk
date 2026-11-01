@@ -33,7 +33,8 @@
     <header class="page-head">
       <p class="kicker">दो दिनों का</p>
       <h1 class="script-title">उत्सव</h1>
-      <p class="note">समय और पहनावे की जानकारी जल्द ही दी जाएगी</p>
+      <p class="note">समय और थीम रंग की जानकारी जल्द ही दी जाएगी।<br>रंग केवल सुझाव हैं, जो आपको सहज लगे, वही पहनें।</p>
+      <p class="countdown" id="countdown"></p>
     </header>
 
     <section class="day day-one" aria-labelledby="day1">
@@ -41,10 +42,22 @@
       <div class="day-body">
         <p class="day-label">पहला दिन</p>
         <h2 class="day-date" id="day1">शनिवार, 20 फ़रवरी</h2>
-        <ul class="event-list">
-          <li class="event"><span class="event-name">हल्दी</span></li>
-          <li class="event"><span class="event-name">संगीत</span></li>
-        </ul>
+        <article class="ev-card">
+          <div class="ev-band" aria-hidden="true"></div>
+          <div class="ev-card-body">
+            <h3 class="event-name">हल्दी</h3>
+            <p class="ev-theme"><span class="dots" aria-hidden="true"><span class="dot dot-ph"></span><span class="dot dot-ph"></span></span> थीम रंग: <em>जल्द ही बताया जाएगा</em></p>
+            <p class="ev-note">परिवार व मित्र दक्षा और मुकुल को हल्दी लगाएँगे। ऐसे कपड़े पहनें जिन पर थोड़ी हल्दी लग जाए तो चिंता न हो।</p>
+          </div>
+        </article>
+        <article class="ev-card">
+          <div class="ev-band" aria-hidden="true"></div>
+          <div class="ev-card-body">
+            <h3 class="event-name">संगीत</h3>
+            <p class="ev-theme"><span class="dots" aria-hidden="true"><span class="dot dot-ph"></span><span class="dot dot-ph"></span></span> थीम रंग: <em>जल्द ही बताया जाएगा</em></p>
+            <p class="ev-note">गीत-संगीत और नृत्य की शाम</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -53,19 +66,25 @@
     <section class="day day-two" aria-labelledby="day2">
       <svg class="arch" aria-hidden="true" preserveAspectRatio="none"><use href="/assets/icons.svg#cusp" width="100%" height="100%" /></svg>
       <div class="day-body">
-        <p class="day-label">दूसरा दिन</p>
+        <p class="day-label">दूसरा दिन · विवाह</p>
         <h2 class="day-date" id="day2">रविवार, 21 फ़रवरी</h2>
-        <ul class="event-list">
-          <li class="event"><span class="event-name">तिलक</span></li>
-          <li class="event"><span class="event-name">घुड़चढ़ी</span></li>
-          <li class="event"><span class="event-name">जयमाला</span></li>
-          <li class="event"><span class="event-name">फेरे</span></li>
-        </ul>
+        <article class="ev-card">
+          <div class="ev-band" aria-hidden="true"></div>
+          <div class="ev-card-body">
+            <p class="ev-theme"><span class="dots" aria-hidden="true"><span class="dot dot-ph"></span><span class="dot dot-ph"></span></span> थीम रंग: <em>जल्द ही बताया जाएगा</em></p>
+            <ul class="event-list">
+              <li class="event"><span class="event-name">तिलक</span></li>
+              <li class="event"><span class="event-name">घुड़चढ़ी</span></li>
+              <li class="event"><span class="event-name">जयमाला</span></li>
+              <li class="event"><span class="event-name">फेरे</span></li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
-
     <div class="actions">
+      <a class="btn btn-wa" href="https://wa.me/?text=%E0%A4%A6%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE%20%E0%A4%8F%E0%A4%B5%E0%A4%82%20%E0%A4%AE%E0%A5%81%E0%A4%95%E0%A5%81%E0%A4%B2%20%E0%A4%95%E0%A5%87%20%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B9%20%E0%A4%95%E0%A4%BE%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%AE%20%E2%80%94%2020%20%E0%A4%8F%E0%A4%B5%E0%A4%82%2021%20%E0%A4%AB%E0%A4%BC%E0%A4%B0%E0%A4%B5%E0%A4%B0%E0%A5%80%202027%2C%20%E0%A4%93%E0%A4%B0%E0%A4%9B%E0%A4%BE%3A%20https%3A%2F%2Fdakmuk.in%2Fhi%2Fschedule%2F" target="_blank" rel="noopener">परिवार को WhatsApp पर भेजें</a>
       <a class="btn btn-fill" href="/hi/travel/">कैसे पहुँचें</a>
       <a class="btn btn-line" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Daksha+%26+Mukul%27s+Wedding&amp;dates=20270220/20270222&amp;ctz=Asia/Kolkata&amp;details=Sachdeva+%26+Dixit+families+invite+you+to+the+wedding.+Schedule+at+dakmuk.in&amp;location=Amar+Mahal%2C+Orchha%2C+Madhya+Pradesh" target="_blank" rel="noopener">Google कैलेंडर में जोड़ें</a>
       <button class="text-link" id="ics-btn" type="button">iPhone कैलेंडर में जोड़ें</button>

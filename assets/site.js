@@ -18,6 +18,15 @@ if (icsBtn) {
   });
 }
 
+// Days to go, on the schedule page
+const countdown = document.getElementById('countdown');
+if (countdown) {
+  const days = Math.ceil((new Date('2027-02-20T00:00:00+05:30') - new Date()) / 86400000);
+  if (days > 0) {
+    countdown.textContent = document.documentElement.lang === 'hi' ? days + ' दिन बाकी' : days + (days === 1 ? ' day to go' : ' days to go');
+  }
+}
+
 // Tap the couple → hearts float up
 const couple = document.getElementById('couple');
 if (couple) {

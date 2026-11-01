@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Schedule — Daksha & Mukul's Wedding</title>
-  <meta name="description" content="Two days of celebrations at Amar Mahal, Orchha — 20th & 21st February 2027" />
+  <meta name="description" content="Two days of celebrations at Amar Mahal, Orchha — 20 & 21 February 2027" />
   <meta property="og:title" content="Schedule — Daksha & Mukul's Wedding" />
   <meta property="og:description" content="Day 1: Haldi, Sangeet · Day 2: Tilak, Ghudchari, Jaimala, Pheras — Amar Mahal, Orchha" />
   <meta property="og:type" content="website" />
@@ -32,7 +32,8 @@
     <header class="page-head">
       <p class="kicker">Two days of</p>
       <h1 class="script-title">Celebrations</h1>
-      <p class="note">Timings and dress codes coming soon</p>
+      <p class="note">Timings and theme colours coming soon.<br>Colours are just a suggestion: wear whatever you're comfortable in.</p>
+      <p class="countdown" id="countdown"></p>
     </header>
 
     <!-- Day one, under a palace arch -->
@@ -41,10 +42,22 @@
       <div class="day-body">
         <p class="day-label">Day one</p>
         <h2 class="day-date" id="day1">Saturday, 20 February</h2>
-        <ul class="event-list">
-          <li class="event"><span class="event-name">Haldi</span></li>
-          <li class="event"><span class="event-name">Sangeet</span></li>
-        </ul>
+        <article class="ev-card">
+          <div class="ev-band" aria-hidden="true"></div>
+          <div class="ev-card-body">
+            <h3 class="event-name">Haldi</h3>
+            <p class="ev-theme"><span class="dots" aria-hidden="true"><span class="dot dot-ph"></span><span class="dot dot-ph"></span></span> Theme colour: <em>to be announced</em></p>
+            <p class="ev-note">Family and friends apply turmeric paste to Daksha and Mukul. Wear something you won't mind getting a little yellow.</p>
+          </div>
+        </article>
+        <article class="ev-card">
+          <div class="ev-band" aria-hidden="true"></div>
+          <div class="ev-card-body">
+            <h3 class="event-name">Sangeet</h3>
+            <p class="ev-theme"><span class="dots" aria-hidden="true"><span class="dot dot-ph"></span><span class="dot dot-ph"></span></span> Theme colour: <em>to be announced</em></p>
+            <p class="ev-note">An evening of music and dance</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -54,19 +67,25 @@
     <section class="day day-two" aria-labelledby="day2">
       <svg class="arch" aria-hidden="true" preserveAspectRatio="none"><use href="/assets/icons.svg#cusp" width="100%" height="100%" /></svg>
       <div class="day-body">
-        <p class="day-label">Day two</p>
+        <p class="day-label">Day two · The wedding</p>
         <h2 class="day-date" id="day2">Sunday, 21 February</h2>
-        <ul class="event-list">
-          <li class="event"><span class="event-name">Tilak</span></li>
-          <li class="event"><span class="event-name">Ghudchari</span></li>
-          <li class="event"><span class="event-name">Jaimala</span></li>
-          <li class="event"><span class="event-name">Pheras</span></li>
-        </ul>
+        <article class="ev-card">
+          <div class="ev-band" aria-hidden="true"></div>
+          <div class="ev-card-body">
+            <p class="ev-theme"><span class="dots" aria-hidden="true"><span class="dot dot-ph"></span><span class="dot dot-ph"></span></span> Theme colour: <em>to be announced</em></p>
+            <ul class="event-list">
+              <li class="event"><span class="event-name">Tilak</span></li>
+              <li class="event"><span class="event-name">Ghudchari</span></li>
+              <li class="event"><span class="event-name">Jaimala</span></li>
+              <li class="event"><span class="event-name">Pheras</span></li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
-
     <div class="actions">
+      <a class="btn btn-wa" href="https://wa.me/?text=Daksha%20%26%20Mukul%27s%20wedding%20schedule%20%E2%80%94%2020%20%26%2021%20Feb%202027%2C%20Orchha%3A%20https%3A%2F%2Fdakmuk.in%2Fschedule%2F" target="_blank" rel="noopener">Send to family on WhatsApp</a>
       <a class="btn btn-fill" href="/travel/">How to get there</a>
       <a class="btn btn-line" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Daksha+%26+Mukul%27s+Wedding&amp;dates=20270220/20270222&amp;ctz=Asia/Kolkata&amp;details=Sachdeva+%26+Dixit+families+invite+you+to+the+wedding.+Schedule+at+dakmuk.in&amp;location=Amar+Mahal%2C+Orchha%2C+Madhya+Pradesh" target="_blank" rel="noopener">Add to Google Calendar</a>
       <button class="text-link" id="ics-btn" type="button">Add to iPhone calendar</button>
