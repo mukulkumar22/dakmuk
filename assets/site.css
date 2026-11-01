@@ -56,6 +56,14 @@ main {
   font-size: clamp(42px, 12vw, 52px); line-height: 1;
 }
 .page-head { text-align: center; padding: 34px 20px 14px; display: grid; gap: 4px; }
+
+/* Small logo at the top of inner pages, tapping back to the invite */
+.top-logo { display: block; width: 96px; margin: 18px auto 0; padding: 8px 0; }
+.top-logo img { width: 96px; height: auto; }
+.top-logo:focus-visible { outline: 2px solid var(--peacock); outline-offset: 2px; border-radius: 4px; }
+.top-logo + .page-head { padding-top: 14px; }
+.top-logo.on-photo { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); margin: 0; }
+.top-logo.on-photo img { filter: drop-shadow(0 1px 6px rgba(30, 20, 15, 0.5)); }
 .note { font-style: italic; font-size: 14px; color: var(--ink-soft); text-align: center; padding: 6px 24px 0; }
 
 /* ── Buttons ── */
@@ -199,8 +207,9 @@ main {
 
 /* ── Orchha ── */
 .photo-hero {
+  position: relative;
   min-height: 300px; display: grid; align-content: end; gap: 2px; padding: 0 22px 22px; color: #fff4e4;
-  background: linear-gradient(180deg, rgba(30, 20, 15, 0) 30%, rgba(30, 20, 15, 0.72) 100%),
+  background: linear-gradient(180deg, rgba(30, 20, 15, 0.55) 0%, rgba(30, 20, 15, 0) 24%, rgba(30, 20, 15, 0) 30%, rgba(30, 20, 15, 0.72) 100%),
     url(/assets/img/chhatris.jpg) center 40% / cover, #6d4569;
 }
 .photo-hero .kicker { color: #fbe3c6; }
