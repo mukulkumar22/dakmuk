@@ -201,6 +201,11 @@ main {
 .dot.dot-glitter { background: linear-gradient(135deg, #f8e7a8 0%, #c9973a 35%, #fff6d2 55%, #b8862f 100%); }
 .ev-card-body { padding: 12px 14px 14px; }
 .ev-card h3.event-name { font-size: 21px; font-weight: 400; }
+/* Event name with its time on the right */
+.ev-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.ev-time { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--peacock); white-space: nowrap; }
+/* An event with no theme colour: a quiet sand band instead of the "to be announced" stripes */
+.ev-plain .ev-band { background: rgba(201, 163, 106, 0.4); }
 .ev-card .event-list { margin-top: 6px; }
 .ev-card .event:first-child { border-top: 0; }
 .ev-card .event { padding: 10px 0; }
