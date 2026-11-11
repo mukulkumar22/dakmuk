@@ -181,6 +181,19 @@ main {
   background: linear-gradient(90deg, var(--c1, transparent) 50%, var(--c2, transparent) 50%),
     repeating-linear-gradient(45deg, rgba(201, 163, 106, 0.5) 0 6px, rgba(201, 163, 106, 0.18) 6px 12px);
 }
+/* Hairline under the band so pale theme colours (Haldi's off-white) still read against the card */
+.ev-band { box-shadow: inset 0 -1px 0 var(--rule); }
+/* Sangeet: dark and glittery — a night-sky band scattered with gold and silver specks */
+.ev-glitter .ev-band {
+  box-shadow: none;
+  background:
+    radial-gradient(circle, #fff 0 0.6px, transparent 1.1px) 7px 1px / 23px 10px,
+    radial-gradient(circle, #f6dc8c 0 0.8px, transparent 1.3px) 0 0 / 15px 10px,
+    radial-gradient(circle, #d9b45a 0 0.7px, transparent 1.2px) 4px 2px / 19px 10px,
+    radial-gradient(circle, #fff3c4 0 0.5px, transparent 1px) 11px -2px / 29px 10px,
+    linear-gradient(90deg, #17131f, #2b2142 50%, #17131f);
+}
+.dot.dot-glitter { background: linear-gradient(135deg, #f8e7a8 0%, #c9973a 35%, #fff6d2 55%, #b8862f 100%); }
 .ev-card-body { padding: 12px 14px 14px; }
 .ev-card h3.event-name { font-size: 21px; font-weight: 400; }
 .ev-card .event-list { margin-top: 6px; }
@@ -228,9 +241,19 @@ main {
 .photo-hero {
   position: relative;
   min-height: 300px; display: grid; align-content: end; gap: 2px; padding: 0 22px 22px; color: #fff4e4;
-  background: linear-gradient(180deg, rgba(30, 20, 15, 0.55) 0%, rgba(30, 20, 15, 0) 24%, rgba(30, 20, 15, 0) 30%, rgba(30, 20, 15, 0.72) 100%),
-    url(/assets/img/chhatris.jpg) center 40% / cover, #5c2a1d;
+  background: url(/assets/img/chhatris.jpg) 56% 40% / cover, #5c2a1d;
+  overflow: hidden;
 }
+/* A short silent clip of the chhatris fades in over the photo, plays once and rests on its last frame */
+.hero-clip { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 56% 40%; opacity: 0; transition: opacity 1.2s ease; pointer-events: none; }
+.hero-clip.on { opacity: 1; }
+/* Shade for the logo and title, above the photo and the clip */
+.photo-hero::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(30, 20, 15, 0.55) 0%, rgba(30, 20, 15, 0) 24%, rgba(30, 20, 15, 0) 30%, rgba(30, 20, 15, 0.72) 100%);
+}
+.photo-hero > :not(.hero-clip) { z-index: 1; }
+.photo-hero > :is(.kicker, .script-title) { position: relative; }
 .photo-hero .kicker { color: #fbe3c6; }
 .photo-hero .script-title { color: #fff4e4; font-size: clamp(54px, 16vw, 66px); }
 .prose { padding: 22px 22px 0; display: grid; gap: 14px; font-size: 17px; line-height: 1.65; }

@@ -26,3 +26,13 @@ if (countdown) {
     countdown.textContent = document.documentElement.lang === 'hi' ? days + ' दिन बाकी' : days + (days === 1 ? ' day to go' : ' days to go');
   }
 }
+
+// Orchha page header: play the short clip once over the photo, unless the guest
+// prefers reduced motion or is saving data
+const heroClip = document.querySelector('.hero-clip');
+if (heroClip && !matchMedia('(prefers-reduced-motion: reduce)').matches && !(navigator.connection && navigator.connection.saveData)) {
+  heroClip.addEventListener('playing', function () { heroClip.classList.add('on'); }, { once: true });
+  heroClip.src = heroClip.dataset.src;
+  const started = heroClip.play();
+  if (started) started.catch(function () {});
+}
