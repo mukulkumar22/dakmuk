@@ -254,15 +254,12 @@ main {
   background: url(/assets/img/chhatris.jpg) 56% 40% / cover, #5c2a1d;
   overflow: hidden;
 }
-/* A short silent clip of the chhatris fades in over the photo, plays once and rests on its last frame */
-.hero-clip { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 56% 40%; opacity: 0; transition: opacity 1.2s ease; pointer-events: none; }
-.hero-clip.on { opacity: 1; }
-/* Shade for the logo and title, above the photo and the clip */
+/* Shade for the logo and title, above the photo */
 .photo-hero::after {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(180deg, rgba(30, 20, 15, 0.55) 0%, rgba(30, 20, 15, 0) 24%, rgba(30, 20, 15, 0) 30%, rgba(30, 20, 15, 0.72) 100%);
 }
-.photo-hero > :not(.hero-clip) { z-index: 1; }
+.photo-hero > * { z-index: 1; }
 .photo-hero > :is(.kicker, .script-title) { position: relative; }
 .photo-hero .kicker { color: #fbe3c6; }
 .photo-hero .script-title { color: #fff4e4; font-size: clamp(54px, 16vw, 66px); }
